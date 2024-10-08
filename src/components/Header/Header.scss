@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+ 
+    padding: 1rem;
+
+    &__logo {
+        width: 90px;
+        border-radius: 100px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    
+}
