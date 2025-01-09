@@ -217,7 +217,79 @@ const Home = () => {
               <h3 className="feature__title">Full Day Coverage</h3>
               <p className="feature__text">Capture every moment</p>
             </div>
+            <div className="feature">
+              <img
+                src={one}
+                alt="Full Day Coverage"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Competitive prices</h3>
+              <p className="feature__text">No hidden fees. Our buisness is built on honesty and upfront communication. </p>
+            </div>
+            <div className="feature">
+              <img
+                src={one}
+                alt="Full Day Coverage"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Personal touch</h3>
+              <p className="feature__text">We care about you and your special day. 24/7 communication with us is available. </p>
+            </div>
           </div>
+          {/* <button className="hero__cta">Check out Packages & Prices</button> */}
+        </section>
+
+        {/* What to Expect Section */}
+        <section className="expect">
+          <h2 className="expect__title">Packages</h2>
+          <div className="expect__features">
+            <div className="feature">
+              <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Diamond: Best value</h3>
+              <p className="feature__text">A Full Day of Footage (Preparation, ceremony and reception.)</p>
+            </div>
+            <div className="feature">
+              <img
+                src={two}
+                alt="Professional Audio"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Gold: Most Popular</h3>
+              <p className="feature__text">Ceremony & Reception</p>
+            </div>
+            <div className="feature">
+              <img
+                src={one}
+                alt="Elegant Storytelling"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Silver: Classic & Unforgettable</h3>
+              <p className="feature__text">Preparation & Ceremony</p>
+            </div>
+            <div className="feature">
+              <img
+                src={one}
+                alt="Full Day Coverage"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Pearl: Simple & Elegant</h3>
+              <p className="feature__text">Ceremony</p>
+            </div>
+            <div className="feature">
+              <img
+                src={one}
+                alt="Full Day Coverage"
+                className="feature__image"
+              />
+              <h3 className="feature__title">Custom</h3>
+              <p className="feature__text">Request additions unique to you</p>
+            </div>
+          </div>
+          <button className="hero__cta">Find out more</button>
         </section>
 
         {/* Vimeo Videos Section */}
