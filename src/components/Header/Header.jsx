@@ -12,10 +12,15 @@ const Header = () => {
         </div>
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="#portfolio" className="nav__link">
+            {/* <a href="#portfolio" className="nav__link">
+              Portfolio
+            </a>
+          <li className="nav__item"> */}
+            <a href="/portfolio" className="nav__link">
               Portfolio
             </a>
           </li>
+   
           <li className="nav__item">
             <a href="#pricing" className="nav__link">
               Services & Pricing
