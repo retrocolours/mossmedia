@@ -1,20 +1,22 @@
-import './App.scss';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Portfolio from './pages/Portfolio/Portfolio';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import "./App.scss";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Services from "./pages/Services/Services";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <Router>
       <div>
-      <Header />
+        <Header />
 
         <Routes>
           <Route path="/" element={<Home />} />
-<Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </div>
@@ -23,4 +25,3 @@ function App() {
 }
 
 export default App;
-
