@@ -204,11 +204,6 @@ const Home = () => {
               <p className="feature__text">Emotional, engaging films</p>
             </div>
             <div className="feature">
-              <img src={one} alt="Drone Footage" className="feature__image" />
-              <h3 className="feature__title">Drone Footage</h3>
-              <p className="feature__text">Stunning aerial views</p>
-            </div>
-            <div className="feature">
               <img
                 src={one}
                 alt="Full Day Coverage"
