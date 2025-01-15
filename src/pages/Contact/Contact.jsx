@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Contact.scss';
+import './Contact.scss';   
 
-const Contact = () => {
+const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,11 +20,33 @@ const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        alert('Form submitted!');
+        console.log('Submitting form with data:', formData);
+    
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            if (response.ok) {
+                console.log('Form submission successful:', await response.text());
+                alert('Form submitted successfully!');
+            } else {
+                const errorText = await response.text();
+                console.error('Form submission failed:', errorText);
+                alert(`Error: ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('An unexpected error occurred. Please try again.');
+        }
     };
+    
 
     return (
         <div className="contact-us">
@@ -208,4 +230,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactUs;
