@@ -10,7 +10,7 @@ const Services = () => {
     <div className="packages-page">
       <h1 className="packages-page__title">Our Wedding Packages</h1>
       <div className="packages-page__container">
-      <div className="package-card">
+        <div className="package-card">
           <img
             src={three}
             alt="Romantic Bliss"
@@ -21,21 +21,50 @@ const Services = () => {
             Best Value for your love story.
           </h3>
           <p className="package-card__description">
-            Perfect for intimate ceremonies, featuring short-form edits and
-            cinematic storytelling.
+            A Full Day of Footage (Preparation, ceremony, and reception.)
           </p>
+          <p className="package-card__description">
+            This package is timeless. If you want to relive your entire wedding
+            day, from morning to evening, we highly recommend this package.
+          </p>
+          <p className="package-card__description">Includes:</p>
           <ul className="package-card__features">
             <li>
-              <FaCheck className="package-card__icon" /> Up to 4 hours of coverage
+              <FaCheck className="package-card__icon" /> A 7-10 minute highlight
+              film covering the entire wedding day, edited to music and
+              delivered in 4K.
             </li>
             <li>
-              <FaCheck className="package-card__icon" /> 1 videographer
+              <FaCheck className="package-card__icon" /> A 1-minute
+              trailer-style video of your wedding day, perfect for sharing on
+              social media.
             </li>
             <li>
-              <FaCheck className="package-card__icon" /> 5-7 minute highlight film
+              <FaCheck className="package-card__icon" />
+              Separate videos of your first dance and all the speeches from the
+              reception, so you can enjoy reliving the heartfelt words.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              The entire ceremony, captured in full wherever it takes place,
+              unedited.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Quality wireless microphone placed on the officiant to ensure
+              crystal-clear audio.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Professionally edited and Color corrected using industry standard
+              software's such as Adobe Premiere Pro and DaVinci Resolve.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Video gimbal stabilizer for high-quality, cinematic shots.
             </li>
           </ul>
-          <div className="package-card__price">$1,800</div>
+          <div className="package-card__price">$4,000</div>
           <button className="package-card__button">Book Now</button>
         </div>
         <div className="package-card">
@@ -44,32 +73,100 @@ const Services = () => {
             alt="Golden Memories"
             className="package-card__image"
           />
-          <h2 className="package-card__name">Golden Memories</h2>
+          <h2 className="package-card__name">Golden Package</h2>
           <h3 className="package-card__tagline">
             Cherish your golden moments forever.
           </h3>
           <p className="package-card__description">
-            A beautifully crafted package that captures every heartfelt moment
-            of your special day with cinematic flair.
+            Ceremony and Reception Coverage
           </p>
-          <div className="package-card__price">$2,500</div>
+          <p className="package-card__description">
+            This package captures all the most important moments of the day,
+            from the ceremony in the church to the first dance.
+          </p>
+          <p className="package-card__description">Includes:</p>
+          <ul className="package-card__features">
+            <li>
+              <FaCheck className="package-card__icon" />A 5-8 minute highlight
+              film covering your wedding day, edited to music and delivered in
+              4K.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />A 1-minute trailer-style
+              video of your wedding day, perfect for sharing on social media.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Separate videos of your first dance and all the speeches from the
+              reception, so you can enjoy reliving the heartfelt words.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              The entire ceremony, captured in full wherever it takes place,
+              unedited.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Quality wireless microphone placed on the officiant to ensure
+              crystal-clear audio.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Professionally edited and Color corrected using industry standard
+              software's such as Adobe Premiere Pro and DaVinci Resolve.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Video gimbal stabilizer for high-quality, cinematic shots.
+            </li>
+          </ul>
+          <div className="package-card__price">$3,500</div>
           <button className="package-card__button">Book Now</button>
         </div>
+
         <div className="package-card">
           <img
             src={two}
             alt="Timeless Elegance"
             className="package-card__image"
           />
-          <h2 className="package-card__name">Timeless Elegance</h2>
-          <h3 className="package-card__tagline">
-            Creating memories that last a lifetime.
-          </h3>
+          <h2 className="package-card__name">Silver Package</h2>
+          <h3 className="package-card__tagline">Classic & Unforgettable</h3>
+          <p className="package-card__description">Preparation & Ceremony</p>
           <p className="package-card__description">
-            A sophisticated package offering full-day coverage, drone shots, and
-            an expertly edited highlight reel.
+            Half-Day of Footage. We arrive during the first part of the day to
+            capture moments such as the preparations for the ceremony and
+            post-ceremony footage and the ceremony as well.
           </p>
-          <div className="package-card__price">$3,800</div>
+          <p className="package-card__description">Includes:</p>
+          <ul className="package-card__features">
+            <li>
+              <FaCheck className="package-card__icon" />A 4-6 minute highlight film covering any preparations all the way until the end of the wedding ceremony, edited to music and delivered in 4K.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />A 1-minute trailer-style video of your wedding day, perfect for sharing on social media.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              The entire ceremony, captured in full wherever it takes place,
+              unedited.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Quality wireless microphone placed on the officiant to ensure
+              crystal-clear audio.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Professionally edited and Color corrected using industry standard
+              software's such as Adobe Premiere Pro and DaVinci Resolve.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Video gimbal stabilizer for high-quality, cinematic shots.
+            </li>
+          </ul>
+          <div className="package-card__price">$2,800</div>
           <button className="package-card__button">Book Now</button>
         </div>
         <div className="package-card">
@@ -78,21 +175,48 @@ const Services = () => {
             alt="Romantic Bliss"
             className="package-card__image"
           />
-          <h2 className="package-card__name">Romantic Bliss</h2>
+          <h2 className="package-card__name">Pearl Package</h2>
           <h3 className="package-card__tagline">
-            Celebrate your love story with style.
+            Simple & Elegant
           </h3>
+          <p className="package-card__description">Ceremony Only</p>
           <p className="package-card__description">
-            Perfect for intimate ceremonies, featuring short-form edits and
-            cinematic storytelling.
+          The entire ceremony, regardless of where it is held, is recorded in full and edited together.
           </p>
-          <div className="package-card__price">$1,800</div>
+          <ul className="package-card__features">
+            <li>
+              <FaCheck className="package-card__icon" />A 3-5 minute highlight film covering the wedding ceremony, Video will be edited to music and delivered in 4K.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />A 1-minute trailer-style video of your wedding day, perfect for sharing on social media.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              The entire ceremony, captured in full wherever it takes place,
+              unedited.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Quality wireless microphone placed on the officiant to ensure
+              crystal-clear audio.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Professionally edited and Color corrected using industry standard
+              software's such as Adobe Premiere Pro and DaVinci Resolve.
+            </li>
+            <li>
+              <FaCheck className="package-card__icon" />
+              Video gimbal stabilizer for high-quality, cinematic shots.
+            </li>
+          </ul>
+          <div className="package-card__price">$2,000</div>
           <button className="package-card__button">Book Now</button>
         </div>
       </div>
-      
-     {/* Additional Services Section */}
-     <div className="addons-section">
+
+      {/* Additional Services Section */}
+      <div className="addons-section">
         <h2 className="addons-section__title">Additional Services & Addons</h2>
         <p className="addons-section__subtitle">
           Choose from our list of additional services and addons to create a
