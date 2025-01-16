@@ -36,11 +36,8 @@ const ContactUs = () => {
                 process.env.REACT_APP_EMAIL_PUBLIC_KEY 
             );
 
-            console.log(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
-console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
-console.log(process.env.REACT_APP_EMAIL_TEMPLATE_ID);
             console.log('Form submitted successfully:', response);
-            alert('Form submitted successfully!');
+            window.location.href = '/confirmation';
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Something went wrong. Please try again.');
