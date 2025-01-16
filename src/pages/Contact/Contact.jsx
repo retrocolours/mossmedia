@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Contact.scss';   
+import emailjs from 'emailjs-com';
+import './Contact.scss';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -22,31 +23,29 @@ const ContactUs = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Submitting form with data:', formData);
-    
+        
+        // Initialize EmailJS
+        emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
+
         try {
-            const response = await fetch('http://localhost:3000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-    
-            if (response.ok) {
-                console.log('Form submission successful:', await response.text());
-                alert('Form submitted successfully!');
-            } else {
-                const errorText = await response.text();
-                console.error('Form submission failed:', errorText);
-                alert(`Error: ${errorText}`);
-            }
+            // Send the form data to EmailJS
+            const response = await emailjs.sendForm(
+                process.env.REACT_APP_EMAIL_SERVICE_ID, 
+                process.env.REACT_APP_EMAIL_TEMPLATE_ID, 
+                e.target,  // Use the form data from the target
+                process.env.REACT_APP_EMAIL_PUBLIC_KEY 
+            );
+
+            console.log(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
+console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
+console.log(process.env.REACT_APP_EMAIL_TEMPLATE_ID);
+            console.log('Form submitted successfully:', response);
+            alert('Form submitted successfully!');
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('An unexpected error occurred. Please try again.');
+            alert('Something went wrong. Please try again.');
         }
     };
-    
 
     return (
         <div className="contact-us">
@@ -188,7 +187,7 @@ const ContactUs = () => {
                                     value="Phonecall"
                                     onChange={handleChange}
                                     required
-                                /> Phonecall
+                                /> Phone Call
                             </label>
                             <label>
                                 <input
@@ -196,7 +195,15 @@ const ContactUs = () => {
                                     name="contactMethod"
                                     value="Zoom"
                                     onChange={handleChange}
-                                /> Zoom
+                                /> Video Call
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="contactMethod"
+                                    value="Email"
+                                    onChange={handleChange}
+                                /> Email
                             </label>
                         </div>
                     </div>

@@ -89,7 +89,7 @@ app.use(cors({
 }));
 
 // Ensure required environment variables are set
-if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.RECEIVER_EMAIL) {
+if (!process.env.REACT_APP_EMAIL_USER || !process.env.REACT_APP_EMAIL_PASS || !process.env.REACT_APP_RECEIVER_EMAIL) {
     console.error('Missing required environment variables. Please check your .env file.');
     process.exit(1);
 }
@@ -144,8 +144,8 @@ app.post('/send-email', async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
+            user: process.env.REACT_APP_EMAIL_USER,
+            pass: process.env.REACT_APP_EMAIL_PASS,
         },
         logger: true, // Enable logging
         debug: true,  // Enable debugging
@@ -154,8 +154,8 @@ app.post('/send-email', async (req, res) => {
     console.log('Transporter configured successfully');
 
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.RECEIVER_EMAIL,
+        from: process.env.REACT_APP_EMAIL_USER,
+        to: process.env.REACT_APP_RECEIVER_EMAIL,
         subject: 'New Contact Form Submission',
         text: `
             You have a new contact form submission. Here are the details:
