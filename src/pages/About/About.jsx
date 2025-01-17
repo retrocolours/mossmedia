@@ -161,8 +161,10 @@ const About = () => {
   </div>
  
 </section>
-<button className="about__cta">Talk to Us</button>
 
+<section className="contact-us">
+<button className="about__cta">Talk to Us</button>
+</section>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .about-container {
-    font-family: 'Serif', serif;
+    font-family: "Shippori Mincho B1", serif;
     color: #000;
 
     &__hero {
@@ -15,8 +15,7 @@
       
   
       .about__intro-text {
-        font-size: 2rem;
-        line-height: 1.6;
+        font-size: 1.8rem;
         max-width: 800px;
         margin: 0 auto;
       }
@@ -156,5 +155,8 @@
   }
 
 
+.contact-us {
+    background: url(../../assets/Images/rings.jpg) center center/cover no-repeat;
+  height: 25vh;
 
-  
+}
