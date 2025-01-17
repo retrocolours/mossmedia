@@ -1,0 +1,138 @@
+.about {
+    font-family: 'Serif', serif;
+    color: #000;
+  
+    /* Top Section */
+    .about__intro {
+      text-align: center;
+      padding: 10rem 2rem;
+  
+      .about__intro-text {
+        font-size: 2rem;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+  
+      .about__scroll-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+  
+        .about__dot {
+          width: 10px;
+          height: 10px;
+          background: #000;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+        }
+  
+        .about__scroll-text {
+          font-size: 1rem;
+          color: #777;
+        }
+      }
+    }
+  
+    /* Services Section */
+    .about__services {
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem 2rem;
+  
+      .about__service {
+        flex: 1;
+        text-align: center;
+  
+        &.about__service-left {
+          border-right: 1px solid #ddd;
+          padding-right: 2rem;
+        }
+  
+        &.about__service-right {
+          padding-left: 2rem;
+        }
+  
+        .about__service-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+  
+        .about__service-description {
+          font-size: 1rem;
+          margin-top: 1rem;
+          color: #777;
+        }
+      }
+    }
+  
+    /* Team Section */
+    .about__team {
+      display: flex;
+      padding: 5rem 2rem;
+      align-items: center;
+  
+      .about__team-description {
+        flex: 1;
+        text-align: left;
+  
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+  
+        .about__team-members p {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+  
+          span {
+            font-weight: bold;
+            color: #999;
+          }
+        }
+      }
+  
+      .about__team-photo {
+        flex: 1;
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  
+    /* Studio Section */
+    .about__studio {
+      display: flex;
+      padding: 5rem 2rem;
+  
+      .about__studio-photo {
+        flex: 1;
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+  
+      .about__studio-info {
+        flex: 1;
+        text-align: left;
+        padding: 0 2rem;
+  
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+  
+        address {
+          font-style: normal;
+          color: #999;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  

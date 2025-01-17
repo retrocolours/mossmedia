@@ -8,6 +8,7 @@ import Contact from "./pages/Contact/Contact";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Confirmation from "./components/Confirmation/Confirmation";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/about" element={<About />} />
+          
         </Routes>
         <Footer />
       </div>
