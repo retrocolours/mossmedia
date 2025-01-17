@@ -53,12 +53,17 @@ const About = () => {
     <div className="about-container">
       {/* Top Section */}
       <section className="about-container__intro">
-        <img src={about} alt="About Us" className="about-container__hero" />
-        <p className="about__intro-text">
-          Copenhagen based agency with a focus on thoughtful creative and growth
-          for unconventional ideas.
+        <img
+          src={about}
+          alt="A married couple enjoying Icelandic nature"
+          className="about-container__hero"
+        />
+        <p className="about-container__intro-text">
+          Vancouver based videography studio with a focus on preserving precious
+          memories and telling love stories.
         </p>
-        <p className="about__intro-us">
+        <span className="about-container__dot"></span>
+        <p className="about-container__intro-us">
           At Moss Media, we are more than just videographers – we are
           storytellers dedicated to capturing life's most cherished moments.
           With a deeply personal approach, we specialize in crafting meaningful
@@ -77,20 +82,19 @@ const About = () => {
           weave together the tapestry of human experience, connecting hearts and
           memories across the North Atlantic and beyond.
         </p>
-        <div className="about__scroll-indicator">
-          <span className="about__dot"></span>
-        </div>
+        <span className="about-container__dot"></span>
       </section>
 
       {/* Services Section */}
-      <h2>Meet Our Team</h2>
-      <section className="about__services">
-        <div className="about__service about__service--left">
-          <h2 className="about__service-title">Stefan Mekkinosson</h2>
-          <p className="about__service-description">
+      <h2 className="heading">Meet Our Team</h2>
+      <section className="team">
+        <div className="team__container">
+            <div className="team__text">
+          <h2 className="team__container-title">Stefan Mekkinosson</h2>
+          <p className="team__container-description">
             Founder, main videographer, editor.
           </p>
-          <p className="about__service-description">
+          <p className="team__container-description">
             Born and raised in Iceland Stefan is an Icelandic-Canadian
             award-winning filmmaker and videographer. He left his homwcountry to
             pursue adventures in his second home, Canada. As a dedicated wedding
@@ -107,8 +111,9 @@ const About = () => {
             memories in a way that you’ll treasure for years to come.
           </p>
         </div>
-        <div className="about__service about__service--right">
-            <img className="stefan" src={stefan} alt="Stefan Mekkinosson" />
+        </div>
+        <div className="team__container team__container--right">
+          <img className="team__container-image" src={stefan} alt="Stefan Mekkinosson" />
         </div>
       </section>
 
@@ -133,38 +138,39 @@ const About = () => {
         </div>
       </section> */}
 
-       {/* Services Section */}
-       <section className="about__services">
-  <div className="about__service about__service--right">
-    <img className="stefan" src={stefan} alt="Stefan Mekkinosson" />
-  </div>
-  <div className="about__service about__service--left">
-    <h2 className="about__service-title">Stefan Mekkinosson</h2>
-    <p className="about__service-description">
-      Founder, main videographer, editor.
-    </p>
-    <p className="about__service-description">
-      Born and raised in Iceland, Stefan is an Icelandic-Canadian award-winning
-      filmmaker and videographer. He left his home country to pursue adventures
-      in his second home, Canada. As a dedicated wedding videographer, my
-      passion lies in capturing the essence and magic of your special day. I
-      believe every love story is unique and deserves to be preserved with
-      artistry and attention to detail, creating a film as unforgettable as the
-      moments themselves. From the quiet, intimate exchanges to the joyous
-      celebrations, I approach every wedding with care and creativity, ensuring
-      no detail is overlooked. With years of experience and a heartfelt
-      commitment to excellence, I strive to craft timeless films that not only
-      reflect your story but surpass your expectations. Your wedding day is one
-      of life’s most cherished milestones, and I am honored to help you preserve
-      these memories in a way that you’ll treasure for years to come.
-    </p>
-  </div>
- 
-</section>
+      {/* Services Section */}
+      <section className="team">
+        <div className="team__container team__container--right">
+          <img className="stefan" src={stefan} alt="Stefan Mekkinosson" />
+        </div>
+        <div className="team__container team__container--left">
+          <h2 className="team__container-title">Stefan Mekkinosson</h2>
+          <p className="team__container-description">
+            Founder, main videographer, editor.
+          </p>
+          <p className="team__container-description">
+            Born and raised in Iceland, Stefan is an Icelandic-Canadian
+            award-winning filmmaker and videographer. He left his home country
+            to pursue adventures in his second home, Canada. As a dedicated
+            wedding videographer, my passion lies in capturing the essence and
+            magic of your special day. I believe every love story is unique and
+            deserves to be preserved with artistry and attention to detail,
+            creating a film as unforgettable as the moments themselves. From the
+            quiet, intimate exchanges to the joyous celebrations, I approach
+            every wedding with care and creativity, ensuring no detail is
+            overlooked. With years of experience and a heartfelt commitment to
+            excellence, I strive to craft timeless films that not only reflect
+            your story but surpass your expectations. Your wedding day is one of
+            life’s most cherished milestones, and I am honored to help you
+            preserve these memories in a way that you’ll treasure for years to
+            come.
+          </p>
+        </div>
+      </section>
 
-<section className="contact-us">
-<button className="about__cta">Talk to Us</button>
-</section>
+      <section className="section-three">
+        <button className="about__cta">Talk to Us</button>
+      </section>
     </div>
   );
 };
