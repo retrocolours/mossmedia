@@ -87,10 +87,11 @@ const About = () => {
 
       {/* Services Section */}
       <h2 className="heading">Meet Our Team</h2>
-      <section className="team">
+      <h2 className="team__container-title">Stefan Mekkinosson</h2>
+      {/* <section className="team">
         <div className="team__container">
             <div className="team__text">
-          <h2 className="team__container-title">Stefan Mekkinosson</h2>
+        
           <p className="team__container-description">
             Founder, main videographer, editor.
           </p>
@@ -112,10 +113,41 @@ const About = () => {
           </p>
         </div>
         </div>
-        <div className="team__container team__container--right">
+        <div className="team__box team__container--right">
           <img className="team__container-image" src={stefan} alt="Stefan Mekkinosson" />
         </div>
-      </section>
+      </section> */}
+<section class="team">
+  <div class="team__container team__container--left">
+    <p class="team__container-description">Founder, main videographer, editor.</p>
+    <p class="team__container-description">
+    Born and raised in Iceland, Stefan is an Icelandic-Canadian
+            award-winning filmmaker and videographer. He left his home country
+            to pursue adventures in his second home, Canada. As a dedicated
+            wedding videographer, my passion lies in capturing the essence and
+            magic of your special day. I believe every love story is unique and
+            deserves to be preserved with artistry and attention to detail,
+            creating a film as unforgettable as the moments themselves. From the
+            quiet, intimate exchanges to the joyous celebrations, I approach
+            every wedding with care and creativity, ensuring no detail is
+            overlooked. With years of experience and a heartfelt commitment to
+            excellence, I strive to craft timeless films that not only reflect
+            your story but surpass your expectations. Your wedding day is one of
+            life’s most cherished milestones, and I am honored to help you
+            preserve these memories in a way that you’ll treasure for years to
+            come.
+    </p>
+  </div>
+  <div class="team__container team__container--right">
+    <img
+      class="team__container-image"
+      src={stefan}
+      alt="Stefan Mekkinosson"
+    />
+  </div>
+</section>
+
+
 
       {/* Team Section */}
       {/* <section className="about__team">
