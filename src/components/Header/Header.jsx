@@ -27,7 +27,7 @@ const Header = () => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="#portfolio" className="nav__link">
+            <a href="/about" className="nav__link">
               Meet Us
             </a>
           </li>
