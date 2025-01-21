@@ -1,39 +1,22 @@
-// * {
-//     box-sizing: border-box;
-//     margin: 0;
-//     padding: 0;
-// }
 
-
-
-// .nav {
-//     display: flex;
-//     justify-content: space-between;
- 
-//     padding: 1rem;
-
-//     &__logo {
-//         width: 90px;
-//         border-radius: 100px;
-//     }
-
-//     &__list {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//     }
-
-    
-// }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+
+  a {
+    text-decoration: none;
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    color:#181818;
+  }
   
   .header {
-    background-color: #f9f4f4;
+
+    // background-color: #FAFAFA;
+      // background-color: #ffffff;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -45,22 +28,24 @@
   
     &__left {
       display: flex;
+    }
+
+    &__right {
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
   
-    &__logo {
-    //   width: 24px;
-    //   height: 24px;
-      margin-right: 0.5rem;
-      width: 90px;
-        border-radius: 100px;
+    &__logo { 
+      width: 110px;
     }
   
-    &__brand {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #000;
-    }
+    // &__brand {
+    //   font-size: 1.2rem;
+    //   font-weight: bold;
+    //   color: #000;
+    // }
   
     &__list {
       display: flex;

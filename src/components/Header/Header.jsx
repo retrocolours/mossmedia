@@ -8,19 +8,14 @@ const Header = () => {
       <nav className="nav">
         <div className="nav__left">
           <img src={logo} className="nav__logo" alt="Moss Media logo" />
-          <p className="nav__brand">Moss Media</p>
         </div>
+        <div className="nav__right">
         <ul className="nav__list">
           <li className="nav__item">
-            {/* <a href="#portfolio" className="nav__link">
-              Portfolio
-            </a>
-          <li className="nav__item"> */}
             <a href="/portfolio" className="nav__link">
               Portfolio
             </a>
           </li>
-   
           <li className="nav__item">
             <a href="/services" className="nav__link">
               Services & Pricing
@@ -38,6 +33,7 @@ const Header = () => {
           </li>
         </ul>
         <button className="nav__cta">Get Started</button>
+        </div>
       </nav>
     </header>
   );
