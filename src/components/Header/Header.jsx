@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/Logos/logo.png";
 import "./Header.scss";
 
@@ -32,7 +33,9 @@ const Header = () => {
             </a>
           </li>
         </ul>
+        <Link to="/contact">
         <button className="nav__cta">Get Started</button>
+        </Link>
         </div>
       </nav>
     </header>

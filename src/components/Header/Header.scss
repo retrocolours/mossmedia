@@ -1,81 +1,147 @@
-
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// a {
+//   text-decoration: none;
+//   font-family: "Shippori Mincho B1", serif;
+//   font-weight: 700;
+//   // color:#181818;
+//   // color: #1a220b;
+//   color: black;
+//   padding: 0.2rem;
+// }
+
+// a:hover {
+//   // color: #e3426a;
+//   // color:#5e8b0a;
+//   color:#3c5a05;
+//   border-bottom: 1px solid #080808; /* Olive pencil-like color */
+//   // border-radius: 1px; /* Smooth the edges */
+//   // transform: skew(-15deg); /* Skew to mimic uneven hand-drawn lines */
+//   // box-shadow: 2px 1px 0px #808000, /* Adds uneven strokes */
+//   //             -1px -1px 0px #808000,
+//   //             -2px 2px 0px transparent; /* Adjust colors for variation */
+//   // transition: width 0.4s ease; /* Smooth drawing animation */
+// }
+
+
+.header {
+  // background-color: #FAFAFA;
+  // background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left {
+    display: flex;
   }
 
-  a {
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__logo {
+    width: 110px;
+  }
+
+  // &__brand {
+  //   font-size: 1.2rem;
+  //   font-weight: bold;
+  //   color: #000;
+  // }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  // &__item {
+  //   &__link {
+  //     text-decoration: none;
+  //     font-size: 1rem;
+  //     color: #000;
+  //     font-weight: 500;
+      
+  //   }
+  // }
+  &__link {
     text-decoration: none;
     font-family: "Shippori Mincho B1", serif;
     font-weight: 700;
-    color:#181818;
-  }
-  
-  .header {
+    // color:#181818;
+    // color: #1a220b;
+    color: black;
+    padding: 0.2rem;
 
-    // background-color: #FAFAFA;
-      // background-color: #ffffff;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    &:hover {
+      color:#3c5a05;
+      border-bottom: 1px solid #080808; 
+    }
   }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    &__left {
-      display: flex;
-    }
 
-    &__right {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-  
-    &__logo { 
-      width: 110px;
-    }
-  
-    // &__brand {
-    //   font-size: 1.2rem;
-    //   font-weight: bold;
-    //   color: #000;
+  &__cta {
+    // padding: 0.5rem 1rem;
+    // background-color: #e3426a;
+    // color: #fff;
+    // border: none;
+    // border-radius: 20px;
+    // font-size: 0.9rem;
+    // font-weight: bold;
+    // cursor: pointer;
+    // transition: background-color 0.3s ease;
+
+    // &:hover {
+    //   background-color: #c7365e;
     // }
-  
-    &__list {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+
+    &:after {
+      content: "";
+      background-color: #f8b17a;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
     }
-  
-    &__item {
-      &__link {
-        text-decoration: none;
-        font-size: 1rem;
-        color: #000;
-        font-weight: 500;
-      }
+
+    &:hover::after { 
+      top: 0px;
+      left: 0px;
     }
-  
-    &__cta {
-      padding: 0.5rem 1rem;
-      background-color: #e3426a;
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-  
-      &:hover {
-        background-color: #c7365e;
-      }
-    }
+
+    
   }
-  
+}
+
+@media (min-width: 768px) {
+  .nav__cta {
+    padding: 13px 50px 13px;
+  }
+}
