@@ -44,11 +44,11 @@ const Header = () => {
               Meet Us
             </a>
           </li>
-          {/* <li className="nav__item">
+          <li className="nav__item--mobile">
             <a href="/contact" className="nav__link">
               Contact
             </a>
-          </li> */}
+          </li>
         </ul>
         <Link to="/contact">
         <button className="nav__cta">Contact</button>
