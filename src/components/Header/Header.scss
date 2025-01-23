@@ -168,7 +168,8 @@
     padding: 0.2rem;
 
     &:hover {
-      color: #3c5a05;
+      // color: #3c5a05;
+      color: #B76E79;
       border-bottom: 1px solid #080808;
     }
   }
@@ -179,33 +180,22 @@
 
   &__cta {
     font-size: 1rem;
-    letter-spacing: 1px;
-    padding: 13px 20px 13px;
-    outline: 0;
-    border: 1px solid black;
+  //  background-color: transparent;
+  // background-color: #410433;
+  background-color: #FAD1D1;
+  // background-color: #E7C9CA;
+    border: 1px solid rgba(0, 0, 0, 0.065);
+   
+    border-radius: 50px;
     cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    user-select: none;
+  padding: 0.6rem 2.2rem;
     font-family: "Shippori Mincho B1", serif;
     font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
 
-    &:after {
-      content: "";
-      background-color: #f8b17a;
-      width: 100%;
-      z-index: -1;
-      position: absolute;
-      height: 100%;
-      top: 7px;
-      left: 7px;
-      transition: 0.2s;
-    }
-
-    &:hover::after {
-      top: 0px;
-      left: 0px;
-    }
+&:hover {
+  background-color: #F4B5B7;
+}
 
     @media (max-width: 1023px) {
       display: none; /* Hide CTA button on smaller screens */
@@ -226,7 +216,7 @@
     }
 
     &-line {
-      background-color: #a80909;
+      background-color: #90477b;
       height: 3px;
       width: 100%;
       border-radius: 3px;
@@ -271,9 +261,5 @@
   }
 }
 
-@media (min-width: 1023px) {
-  .nav__cta {
-    padding: 13px 50px 13px;
-  }
-}
+
 
