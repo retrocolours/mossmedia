@@ -1,16 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "../../assets/Logos/logo.png";
 import "./Header.scss";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <nav className="nav">
+        <Link to="/">
         <div className="nav__left">
           <img src={logo} className="nav__logo" alt="Moss Media logo" />
         </div>
-        <div className="nav__right">
+        </Link>
+        <div
+          className={`nav__burger ${menuOpen ? "nav__burger--open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span className="nav__burger-line"></span>
+          <span className="nav__burger-line"></span>
+          <span className="nav__burger-line"></span>
+        </div>
+        <div className={`nav__menu ${menuOpen ? "nav__menu--open" : ""}`}>
         <ul className="nav__list">
           <li className="nav__item">
             <a href="/portfolio" className="nav__link">
