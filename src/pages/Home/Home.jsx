@@ -7,7 +7,7 @@ import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
 // import four from "../../assets/Images/four.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
-// import "font-awesome/css/font-awesome.min.css";
+
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -62,15 +62,14 @@ const Home = () => {
         <section className="hero">
           <video autoPlay loop muted className="hero__video" playsInline>
             <source src={teaser} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <div className="hero__image"></div>
           <div className="hero__content">
-            <h1 className="hero__title">Modern & elegant wedding films</h1>
+            <h1 className="hero__title">Cinematic wedding films</h1>
             <p className="hero__subtitle">
               Preserving lifelong memories, one frame at a time.
             </p>
-            <button className="hero__cta">View Portfolio</button>
+            {/* <button className="hero__cta">View Portfolio</button> */}
           </div>
         </section>
 
