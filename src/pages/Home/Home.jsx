@@ -6,8 +6,9 @@ import one from "../../assets/Images/one.jpg";
 import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
 // import four from "../../assets/Images/four.jpg";
+import five from "../../assets/Images/five.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
-
+import { FiVolume } from "react-icons/fi";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -69,7 +70,6 @@ const Home = () => {
             <p className="hero__subtitle">
               Preserving lifelong memories, one frame at a time.
             </p>
-            {/* <button className="hero__cta">View Portfolio</button> */}
           </div>
         </section>
 
@@ -103,9 +103,11 @@ const Home = () => {
         </section> */}
 
         <section className="about">
-          <div className="about__container">
+
+          <h2 className="about__title">About Us</h2>
+
+          {/* <div className="about__container">
             <div className="about__text">
-              <h2 className="about__title">About Us</h2>
               <p className="about__description">
                 Welcome to Moss Media! We a creative group of professional
                 videographers who we specialize in creating captivating wedding
@@ -135,6 +137,43 @@ const Home = () => {
               <img src={two} alt="Cinematic moment" className="about__image" />
               <img src={three} alt="Memorable scene" className="about__image" />
             </div>
+          </div> */}
+          <div className="about__container">
+            <div className="about__box-one">
+
+              <p className="about__text">Welcome to Moss Media! We a creative group of professional
+              videographers who we specialize in creating captivating wedding
+              films that tell your unique story. With years of experience and a
+              deep passion for storytelling, we ensure every frame captures the
+              essence of your special day.</p>
+        
+              <img src={three} alt="Memorable scene" className="about__image" />
+            </div>
+        
+            <div className="about__box-two">
+
+              <p className="about__text">We prioritize the well-being of our team, clients, and
+              surroundings in every aerial endeavor. Striving for excellence in
+              every aspect, we rigorously adhere to all FAA regulations,
+              guaranteeing not only stunning visuals but also peace of mind for
+              all in our environment. With a blend of creativity, diligence, and
+              adherence to safety standards, we redefine the possibilities of
+              aerial photography, capturing moments that inspire and endure.
+              (this needs to be changed and shorter).</p>
+  
+              <img src={five} alt="Elegant moment" className="about__image" />
+            </div>
+            <div className="about__box-three">
+            <p className="about__text">Our mission is to capture the world from captivating angles,
+              elevating perspectives through innovative drone photography and
+              videography. We embody flexibility, seamlessly adapting to our
+              clients' needs and envisioning creative approaches to every
+              project. Committed to excellence, we thrive on hard work, ensuring
+              each image reflects our dedication to precision and quality.
+              Safety is our cornerstone.</p>
+              <img src={two} alt="Elegant moment" className="about__image" />
+            </div>
+           
           </div>
         </section>
 
@@ -218,7 +257,10 @@ const Home = () => {
                 className="feature__image"
               />
               <h3 className="feature__title">Competitive prices</h3>
-              <p className="feature__text">No hidden fees. Our buisness is built on honesty and upfront communication. </p>
+              <p className="feature__text">
+                No hidden fees. Our buisness is built on honesty and upfront
+                communication.{" "}
+              </p>
             </div>
             <div className="feature">
               <img
@@ -227,7 +269,10 @@ const Home = () => {
                 className="feature__image"
               />
               <h3 className="feature__title">Personal touch</h3>
-              <p className="feature__text">We care about you and your special day. 24/7 communication with us is available. </p>
+              <p className="feature__text">
+                We care about you and your special day. 24/7 communication with
+                us is available.{" "}
+              </p>
             </div>
           </div>
           {/* <button className="hero__cta">Check out Packages & Prices</button> */}
@@ -244,7 +289,9 @@ const Home = () => {
                 className="feature__image"
               />
               <h3 className="feature__title">Diamond: Best value</h3>
-              <p className="feature__text">A Full Day of Footage (Preparation, ceremony and reception.)</p>
+              <p className="feature__text">
+                A Full Day of Footage (Preparation, ceremony and reception.)
+              </p>
             </div>
             <div className="feature">
               <img
@@ -261,7 +308,9 @@ const Home = () => {
                 alt="Elegant Storytelling"
                 className="feature__image"
               />
-              <h3 className="feature__title">Silver: Classic & Unforgettable</h3>
+              <h3 className="feature__title">
+                Silver: Classic & Unforgettable
+              </h3>
               <p className="feature__text">Preparation & Ceremony</p>
             </div>
             <div className="feature">
