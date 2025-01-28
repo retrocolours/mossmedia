@@ -73,137 +73,54 @@ const Home = () => {
           </div>
         </section>
 
-        {/* About Us Section */}
-        {/* <section className="about">
-          <div className="about__content">
-            <h2 className="about__title">About Us</h2>
-            <p className="about__description">
-              At Moss Media, we specialize in creating captivating wedding films
-              that tell your unique story. With years of experience and a deep
-              passion for storytelling, we ensure that every frame captures the
-              essence of your special day.
-            </p>
-            <div className="about__cards">
-              <div className="card">
-                <h3 className="card__title">Who We Are</h3>
-                <p className="card__text">
-                  A team of professional filmmakers dedicated to turning your
-                  memories into cinematic masterpieces.
-                </p>
-              </div>
-              <div className="card">
-                <h3 className="card__title">What We Do</h3>
-                <p className="card__text">
-                  We craft elegant, timeless wedding films that preserve every
-                  heartfelt moment for generations to come.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         <section className="about">
-
           <h2 className="about__title">About Us</h2>
-
-          {/* <div className="about__container">
-            <div className="about__text">
-              <p className="about__description">
-                Welcome to Moss Media! We a creative group of professional
-                videographers who we specialize in creating captivating wedding
-                films that tell your unique story. With years of experience and
-                a deep passion for storytelling, we ensure every frame captures
-                the essence of your special day.
-              </p>
-              <p className="about__description">
-                Our mission is to capture the world from captivating angles,
-                elevating perspectives through innovative drone photography and
-                videography. We embody flexibility, seamlessly adapting to our
-                clients' needs and envisioning creative approaches to every
-                project. Committed to excellence, we thrive on hard work,
-                ensuring each image reflects our dedication to precision and
-                quality. Safety is our cornerstone. We prioritize the well-being
-                of our team, clients, and surroundings in every aerial endeavor.
-                Striving for excellence in every aspect, we rigorously adhere to
-                all FAA regulations, guaranteeing not only stunning visuals but
-                also peace of mind for all in our environment. With a blend of
-                creativity, diligence, and adherence to safety standards, we
-                redefine the possibilities of aerial photography, capturing
-                moments that inspire and endure. (this needs to be changed and shorter).
-              </p>
-            </div>
-            <div className="about__images">
-              <img src={one} alt="Elegant moment" className="about__image" />
-              <img src={two} alt="Cinematic moment" className="about__image" />
-              <img src={three} alt="Memorable scene" className="about__image" />
-            </div>
-          </div> */}
           <div className="about__container">
             <div className="about__box-one">
-
-              <p className="about__text">Welcome to Moss Media! We a creative group of professional
-              videographers who we specialize in creating captivating wedding
-              films that tell your unique story. With years of experience and a
-              deep passion for storytelling, we ensure every frame captures the
-              essence of your special day.</p>
-        
+              <p className="about__text">
+                Welcome to <span className="about__name">Moss Media</span>! We
+                are a small creative group of professional videographers. We
+                specialize in making cinematic wedding films that tell unique
+                love stories. With years of experience and a deep passion for
+                storytelling, we ensure every frame captures the essence of your
+                special day and preserves precious memories for years to come.
+              </p>
               <img src={three} alt="Memorable scene" className="about__image" />
             </div>
-        
-            <div className="about__box-two">
 
-              <p className="about__text">We prioritize the well-being of our team, clients, and
-              surroundings in every aerial endeavor. Striving for excellence in
-              every aspect, we rigorously adhere to all FAA regulations,
-              guaranteeing not only stunning visuals but also peace of mind for
-              all in our environment. With a blend of creativity, diligence, and
-              adherence to safety standards, we redefine the possibilities of
-              aerial photography, capturing moments that inspire and endure.
-              (this needs to be changed and shorter).</p>
-  
+            <div className="about__box-two">
+              <p className="about__text">
+                Originally founded in Reykjavik, Iceland, we have since expanded
+                our services to the Greater Vancouver Area. The name Moss Media
+                symbolizes a unique connection between Iceland and Canada, the
+                countries we call our home. In both places, moss thrives as a
+                symbol of resilience and natural beauty, growing across diverse
+                landscapes. This shared element of our environments inspired us,
+                as it mirrors the values that we cherish: resilience, diversity
+                and the preservation of beauty.
+              </p>
+
               <img src={five} alt="Elegant moment" className="about__image" />
             </div>
             <div className="about__box-three">
-            <p className="about__text">Our mission is to capture the world from captivating angles,
-              elevating perspectives through innovative drone photography and
-              videography. We embody flexibility, seamlessly adapting to our
-              clients' needs and envisioning creative approaches to every
-              project. Committed to excellence, we thrive on hard work, ensuring
-              each image reflects our dedication to precision and quality.
-              Safety is our cornerstone.</p>
+              <p className="about__text">
+                Moss Media is a small family-run business that takes pride in
+                offering a personal approach to each client. We value
+                compassionate communication and transparency in our craft. With
+                us, you’ll never have to worry about hidden fees or surprises,
+                as we are upfront about all our pricing and services. We understand
+                that planning a wedding can be stressful, which is why we
+                guarantee a calm, smooth, and enjoyable experience when working
+                with us. To our treasured clients, we offer a range of
+                thoughtfully designed packages to make your wedding day truly
+                unforgettable. From the vows to the first dance, we capture
+                every moment with care, creativity, and attention to detail.
+              </p>
+
               <img src={two} alt="Elegant moment" className="about__image" />
             </div>
-           
           </div>
         </section>
-
-        {/* <section className="about">
-  <div className="about__container">
-    <div className="about__images">
-      <div className="about__image-container with-text">
-        <img src={one} alt="Elegant moment" className="about__image" />
-        <div className="about__overlay-text">
-          <h2 className="about__title">About Us</h2>
-          <p className="about__description">
-            At Moss Media, we specialize in creating captivating wedding films that
-            tell your unique story. With years of experience and a deep passion for
-            storytelling, we ensure every frame captures the essence of your special day.
-          </p>
-        </div>
-      </div>
-      <img src={two} alt="Cinematic moment" className="about__image" />
-      <img src={three} alt="Memorable scene" className="about__image" />
-    </div>
-    <div className="about__decorative-line"></div>
-    <div className="about__text">
-      <h2 className="about__title">Our Approach</h2>
-      <p className="about__description">
-        Every wedding is a unique story, and our team of skilled filmmakers is dedicated
-        to capturing its essence through beautiful cinematography and storytelling.
-      </p>
-    </div>
-  </div>
-</section> */}
 
         {/* What to Expect Section */}
         <section className="expect">
