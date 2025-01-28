@@ -7,8 +7,8 @@ import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
 // import four from "../../assets/Images/four.jpg";
 import five from "../../assets/Images/five.jpg";
+import six from "../../assets/Images/six.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
-import { FiVolume } from "react-icons/fi";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -91,10 +91,11 @@ const Home = () => {
             <div className="about__box-two">
               <p className="about__text">
                 Originally founded in Reykjavik, Iceland, we have since expanded
-                our services to the Greater Vancouver Area. The name Moss Media
-                symbolizes a unique connection between Iceland and Canada, the
-                countries we call our home. In both places, moss thrives as a
-                symbol of resilience and natural beauty, growing across diverse
+                our services to the Greater Vancouver Area. The name{" "}
+                <span className="about__name">Moss Media</span> symbolizes a
+                unique connection between Iceland and Canada, the countries we
+                call our home. In both places, moss thrives as a symbol of
+                resilience and natural beauty, growing across diverse
                 landscapes. This shared element of our environments inspired us,
                 as it mirrors the values that we cherish: resilience, diversity
                 and the preservation of beauty.
@@ -104,32 +105,40 @@ const Home = () => {
             </div>
             <div className="about__box-three">
               <p className="about__text">
-                Moss Media is a small family-run business that takes pride in
-                offering a personal approach to each client. We value
-                compassionate communication and transparency in our craft. With
-                us, you’ll never have to worry about hidden fees or surprises,
-                as we are upfront about all our pricing and services. We understand
-                that planning a wedding can be stressful, which is why we
-                guarantee a calm, smooth, and enjoyable experience when working
-                with us. To our treasured clients, we offer a range of
-                thoughtfully designed packages to make your wedding day truly
-                unforgettable. From the vows to the first dance, we capture
-                every moment with care, creativity, and attention to detail.
+                <span className="about__name">Moss Media</span> is a small
+                family-run business that takes pride in offering a personal
+                approach to each client. We value compassionate communication
+                and transparency in our craft. With us, you’ll never have to
+                worry about hidden fees or surprises, as we are upfront about
+                all our pricing and services. We understand that planning a
+                wedding can be stressful, which is why we guarantee a calm,
+                smooth, and enjoyable experience when working with us. To our
+                treasured clients, we offer a range of thoughtfully designed
+                packages to make your wedding day truly unforgettable. From the
+                vows to the first dance, we capture every moment with care,
+                creativity, and attention to detail.
               </p>
 
-              <img src={two} alt="Elegant moment" className="about__image" />
+              <img
+                src={six}
+                alt="Elegant moment"
+                className="about__image about__image--third"
+              />
             </div>
           </div>
         </section>
 
-        {/* What to Expect Section */}
+     
         <section className="expect">
+          <div className="expect__container">
           <h2 className="expect__title">What we offer</h2>
-          <p className="expect__description">
+          <div className="expect__offers">
+          {/* <p className="expect__description">
+            Each of our packages can be tailored to your individual needs.
             I focus on creating high quality videos that tell the unique story
             of your wedding. From the vows to the first dance, I capture every
             moment with care and creativity.
-          </p>
+          </p> */}
           <div className="expect__features">
             <div className="feature">
               <img
@@ -191,6 +200,8 @@ const Home = () => {
                 us is available.{" "}
               </p>
             </div>
+          </div>
+          </div>
           </div>
           {/* <button className="hero__cta">Check out Packages & Prices</button> */}
         </section>

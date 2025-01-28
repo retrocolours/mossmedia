@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/Logos/logo.png";
 import "./Header.scss";
+//add links and navlinks
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
