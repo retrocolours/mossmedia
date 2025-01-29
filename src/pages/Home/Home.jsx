@@ -11,10 +11,11 @@ import six from "../../assets/Images/six.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
 import touch from "../../assets/Images/touch.jpg";
 import story from "../../assets/Images/story.jpg";
-import fullday from "../../assets/Images/fullday.jpg";
+import ring from "../../assets/Images/ring.jpg";
 import colour from "../../assets/Images/colour.jpg";
 import cake from "../../assets/Images/cake.jpg";
 import wine from "../../assets/Images/wine.jpg";
+import people from "../../assets/Images/people.jpg";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -133,87 +134,80 @@ const Home = () => {
             </div>
           </div>
         </section>
-     
+
         <section className="expect">
-        
           <div className="expect__container">
-          <h2 className="expect__title">What we offer</h2>
+            <h2 className="expect__title">What we offer</h2>
           </div>
           <div className="expect__features">
             <div className="expect__top">
-            <div className="expect__feature">
-             
-              <h3 className="expect__name">Cinematic Quality</h3>
-              <img
-                src={two}
-                alt="Cinematic Quality"
-                className="expect__image"
-              />
-              <p className="expect__text">Beautiful visuals, shot in 4k</p>
-           
-            </div>
-            <div className="expect__feature">
-             
-              <h3 className="expect__name">Professional Audio and Colour Correction</h3>
-              <img
-                src={colour}
-                alt="Cinematic Quality"
-                className="expect__image"
-              />
-              <p className="expect__text">High quality microphones</p>
-            </div>
-            <div className="expect__feature">
-              
-              <h3 className="expect__name">Elegant Storytelling</h3>
-              <img
-                src={story}
-                alt="Cinematic Quality"
-                className="expect__image"
-              />
-              <p className="expect__text">Emotional, engaging films</p>
-            </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">Cinematic Quality</h3>
+                <img
+                  src={ring}
+                  alt="Cinematic Quality"
+                  className="expect__image"
+                />
+                <p className="expect__text">Beautiful visuals, shot in 4k</p>
+              </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">
+                  Professional Audio and Colour Correction
+                </h3>
+                <img
+                  src={colour}
+                  alt="Cinematic Quality"
+                  className="expect__image"
+                />
+                <p className="expect__text">High quality microphones</p>
+              </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">Elegant Storytelling</h3>
+                <img
+                  src={story}
+                  alt="Cinematic Quality"
+                  className="expect__image"
+                />
+                <p className="expect__text">Emotional, engaging films</p>
+              </div>
             </div>
             <div className="expect__bottom">
-            <div className="expect__feature">
-           
-              <h3 className="expect__name">Full Day Coverage</h3>
-              <img
-                src={cake}
-                alt="Cinematic Quality"
-                className="expect__image"
-              />
-              <p className="expect__text">Capture every moment</p>
-            </div>
-            <div className="expect__feature">
-           
-              <h3 className="expect__name">Competitive prices</h3>
-              <img
-                src={wine}
-                alt="Cinematic Quality"
-                className="expect__image"
-              />
-              <p className="expect__text">
-                No hidden fees. Our buisness is built on honesty and upfront
-                communication.{" "}
-              </p>
-            </div>
-            <div className="expect__feature">
-             
-              <h3 className="expect__name">Personal touch</h3>
-              <img
-                src={touch}
-                alt="Black sheep standing in a field"
-                className="expect__image"
-              />
-              <p className="expect__text">
-                We care about you and your special day. 24/7 communication with
-                us is available.{" "}
-              </p>
-            </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">Full Day Coverage</h3>
+                <img
+                  src={people}
+                  alt="Cinematic Quality"
+                  className="expect__image"
+                />
+                <p className="expect__text">Capture every moment</p>
+              </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">Competitive prices</h3>
+                <img
+                  src={wine}
+                  alt="Cinematic Quality"
+                  className="expect__image"
+                />
+                <p className="expect__text">
+                  No hidden fees. Our buisness is built on honesty and upfront
+                  communication.{" "}
+                </p>
+              </div>
+              <div className="expect__feature">
+                <h3 className="expect__heading">Personal touch</h3>
+                <img
+                  src={touch}
+                  alt="Black sheep standing in a field"
+                  className="expect__image"
+                />
+                <p className="expect__text">
+                  We care about you and your special day. 24/7 communication
+                  with us is available.{" "}
+                </p>
+              </div>
             </div>
           </div>
-       
-          
+
           {/* <div class="container">
 	<div class="boxes">
 		<div class="box">
