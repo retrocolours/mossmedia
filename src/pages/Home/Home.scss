@@ -176,18 +176,22 @@
   }
 }
 
+
+
 .expect {
   display: flex;
   flex-direction: column;
   background-color: #efeeee;
   padding: 1rem 0;
+  font-family: "Shippori Mincho B1", serif;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: 2.5rem;
     // max-width: 1300px;
-    gap: 2rem;
+    // gap: 2rem;
   }
 
   &__title {
@@ -206,48 +210,56 @@
     padding-bottom: 0.4rem;
   }
 
-  &__offers {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    // padding: 2rem;
-  }
+  // &__offers {
+  //   display: flex;
+  //   align-items: center;
+  //   // flex-direction: column;
+  //   padding: 2rem;
+  // }
 
-  &__description {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-  }
+  // &__description {
+  //   font-size: 1.2rem;
+  //   max-width: 700px;
+  //   margin: 0 auto 2rem;
+  // }
 
   &__features {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     gap: 2rem;
   }
 
-  .feature {
+  &__top, &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    max-width: 200px;
+    max-width: 300px;
+    gap: 1rem;
+  }
 
     &__image {
+   
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 0.5rem;
+      // border-radius: 10px;
+      // margin-bottom: 0.5rem;
     }
 
-    &__title {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-    }
+   
 
     &__text {
       font-size: 0.9rem;
       color: #666;
     }
   }
-}
 
 .videos {
   text-align: center;

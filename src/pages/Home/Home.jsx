@@ -9,6 +9,12 @@ import three from "../../assets/Images/three.jpg";
 import five from "../../assets/Images/five.jpg";
 import six from "../../assets/Images/six.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
+import touch from "../../assets/Images/touch.jpg";
+import story from "../../assets/Images/story.jpg";
+import fullday from "../../assets/Images/fullday.jpg";
+import colour from "../../assets/Images/colour.jpg";
+import cake from "../../assets/Images/cake.jpg";
+import wine from "../../assets/Images/wine.jpg";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -127,18 +133,150 @@ const Home = () => {
             </div>
           </div>
         </section>
-
      
         <section className="expect">
+        
           <div className="expect__container">
           <h2 className="expect__title">What we offer</h2>
-          <div className="expect__offers">
-          {/* <p className="expect__description">
-            Each of our packages can be tailored to your individual needs.
-            I focus on creating high quality videos that tell the unique story
-            of your wedding. From the vows to the first dance, I capture every
-            moment with care and creativity.
-          </p> */}
+          </div>
+          <div className="expect__features">
+            <div className="expect__top">
+            <div className="expect__feature">
+             
+              <h3 className="expect__name">Cinematic Quality</h3>
+              <img
+                src={two}
+                alt="Cinematic Quality"
+                className="expect__image"
+              />
+              <p className="expect__text">Beautiful visuals, shot in 4k</p>
+           
+            </div>
+            <div className="expect__feature">
+             
+              <h3 className="expect__name">Professional Audio and Colour Correction</h3>
+              <img
+                src={colour}
+                alt="Cinematic Quality"
+                className="expect__image"
+              />
+              <p className="expect__text">High quality microphones</p>
+            </div>
+            <div className="expect__feature">
+              
+              <h3 className="expect__name">Elegant Storytelling</h3>
+              <img
+                src={story}
+                alt="Cinematic Quality"
+                className="expect__image"
+              />
+              <p className="expect__text">Emotional, engaging films</p>
+            </div>
+            </div>
+            <div className="expect__bottom">
+            <div className="expect__feature">
+           
+              <h3 className="expect__name">Full Day Coverage</h3>
+              <img
+                src={cake}
+                alt="Cinematic Quality"
+                className="expect__image"
+              />
+              <p className="expect__text">Capture every moment</p>
+            </div>
+            <div className="expect__feature">
+           
+              <h3 className="expect__name">Competitive prices</h3>
+              <img
+                src={wine}
+                alt="Cinematic Quality"
+                className="expect__image"
+              />
+              <p className="expect__text">
+                No hidden fees. Our buisness is built on honesty and upfront
+                communication.{" "}
+              </p>
+            </div>
+            <div className="expect__feature">
+             
+              <h3 className="expect__name">Personal touch</h3>
+              <img
+                src={touch}
+                alt="Black sheep standing in a field"
+                className="expect__image"
+              />
+              <p className="expect__text">
+                We care about you and your special day. 24/7 communication with
+                us is available.{" "}
+              </p>
+            </div>
+            </div>
+          </div>
+       
+          
+          {/* <div class="container">
+	<div class="boxes">
+		<div class="box">
+			<p class="icon">Cinematic Quality</p>
+      <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			The King can move just one square at a time in any direction. It should be defended at all times by the other pieces as once checkmated the game is lost.
+		</div>
+		<div class="box">
+			<p class="icon">Professional Audio</p>
+      <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			The most powerful piece on the board, the Queen can move any number of squares in straight lines or on the diagonal until obstructed by another piece.
+		</div>
+		<div class="box">
+			<p class="icon">Elegant Storytelling</p>
+      <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			After the Queen the Rook is the next most powerful piece on the board. It can move any number of squares in a straight line until obstructed by another piece.
+		</div>
+	</div>
+	<div class="boxes">
+		<div class="box">
+			<p class="icon">Full Day Coverage</p>
+      <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			The Bishop can move any number of squares on the diagonal until obstructed by another piece. Each Bishop will always occupy squares of the same colour as it's starting square.
+		</div>
+		<div class="box">
+			<p class="icon">Competitive prices</p>
+      <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			The Knight can move to any of the eight squares of the opposite colour to the one on which it stands that are either two ranks or two files away. It's move is not obstructed by other pieces.
+		</div>
+		<div class="box">
+			<p class="icon">Personal touch</p>
+		  <img
+                src={three}
+                alt="Cinematic Quality"
+                className="feature__image"
+              />
+			Considered the weakest piece on the board the Pawn can only move forward one square at a time on the same file, except for it's first move when it can move two squares forward. On reaching the eighth rank a Pawn can be promoted to the value of any other piece.
+		</div>
+	</div> */}
+
+          {/* </div>  */}
+          {/* <div className="expect__offers">
+         
           <div className="expect__features">
             <div className="feature">
               <img
@@ -202,14 +340,14 @@ const Home = () => {
             </div>
           </div>
           </div>
-          </div>
+          </div> */}
           {/* <button className="hero__cta">Check out Packages & Prices</button> */}
         </section>
 
         {/* What to Expect Section */}
-        <section className="expect">
-          <h2 className="expect__title">Packages</h2>
-          <div className="expect__features">
+        <section className="packages">
+          <h2 className="packages__title">Packages</h2>
+          <div className="packages__features">
             <div className="feature">
               <img
                 src={three}
