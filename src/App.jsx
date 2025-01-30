@@ -15,7 +15,6 @@ function App() {
     <Router>
       <div>
         <Header />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -23,7 +22,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/about" element={<About />} />
-          
         </Routes>
         <Footer />
       </div>
