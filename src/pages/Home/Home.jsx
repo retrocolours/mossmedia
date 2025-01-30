@@ -13,9 +13,10 @@ import touch from "../../assets/Images/touch.jpg";
 import story from "../../assets/Images/story.jpg";
 import ring from "../../assets/Images/ring.jpg";
 import colour from "../../assets/Images/colour.jpg";
-import cake from "../../assets/Images/cake.jpg";
+// import cake from "../../assets/Images/cake.jpg";
 import wine from "../../assets/Images/wine.jpg";
 import people from "../../assets/Images/people.jpg";
+
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -53,12 +54,22 @@ const Home = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+  
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          dots: true,
+          vertical: true, // Enables vertical dots
+          verticalSwiping: true, // Enables vertical swiping
+          arrows: false,
+        appendDots: (dots) => (
+          <div className="vertical-dots">
+            <ul>{dots}</ul>
+          </div>
+        ),
         },
       },
     ],
@@ -135,9 +146,10 @@ const Home = () => {
           </div>
         </section>
 
- {/* Vimeo Videos Section */}
  <section className="videos">
+  <div className="videos__container">
           <h2 className="videos__title">Our Videos</h2>
+          </div>
           <Slider {...settings} className="video-carousel">
             {videos.map((video) => (
               <div key={video.uri} className="video-item">
@@ -154,15 +166,16 @@ const Home = () => {
               </div>
             ))}
           </Slider>
+
         </section>
 
 
 
 
         <section className="expect">
-          <div className="expect__container">
+          {/* <div className="expect__container"> */}
             <h2 className="expect__title">What we offer</h2>
-          </div>
+          {/* </div> */}
           <div className="expect__features">
             <div className="expect__top">
               <div className="expect__feature">

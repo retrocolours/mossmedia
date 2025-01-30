@@ -161,10 +161,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
 
-
     &:hover {
       transform: scale(1.05);
-      
     }
 
     @media (max-width: 768px) {
@@ -178,14 +176,101 @@
   }
 }
 
-
-
 .expect {
   display: flex;
   flex-direction: column;
   // background-color: #efeeee;
-  background-color: #FAF5F2;
+  background-color: #faf5f2;
   padding: 1rem 0;
+  font-family: "Shippori Mincho B1", serif;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    // max-width: 1300px;
+    // gap: 2rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: #80133f;
+    font-style: italic;
+    // color: #850237; //darker
+    // padding-bottom: 2rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    // background: #3e0122;
+    border-bottom: 1px solid #80133f;
+    max-width: 300px; //add this as a mixin
+  }
+
+  &__heading {
+    font-size: 1.4rem;
+    padding: 0.7rem;
+    // max-width: 400px;
+  }
+
+  &__features {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    max-width: 380px;
+    // gap: 1rem;
+    // width: 100%;
+    background-color: white;
+    // max-height: 400px;
+    height: 350px;
+    // padding: 1rem;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // border-radius: 15px 50px;
+    // border: 1px solid #5b595a;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    color: #454444;
+    // line-height: 1.3;
+    padding: 1.2rem;
+    padding-bottom: 1.8rem;
+  }
+}
+
+.videos {
+  padding: 2rem 0;
+  text-align: center;
+  // background-color: #faf5f2;
+    background-color: #f2f1f1e7;
+  height: 600px;
   font-family: "Shippori Mincho B1", serif;
 
   &__container {
@@ -213,84 +298,11 @@
     padding-bottom: 0.4rem;
   }
 
-
-
-  &__heading {
-    font-size: 1.4rem;
-    padding: 0.7rem;
-    // max-width: 400px;
-
-  }
-
-  &__features {
-    display: flex;
-    // flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-
-    gap: 2rem;
-  }
-
-  &__top, &__bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-   
-  }
-
-  &__feature {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-   justify-content: space-evenly;
-    max-width: 380px;
-    // gap: 1rem;
-    // width: 100%;
-  background-color: white;
-  // max-height: 400px;
-  height: 350px;
-  // padding: 1rem;
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  // border-radius: 15px 50px; 
-// border: 1px solid #5b595a;
-
-transition: transform 0.3s ease;
-
-&:hover {
-  transform: scale(1.05);
-}
-  }
-
-    &__image {
-   
-      width: 100%;
-      
-     
-    }
-
-    &__text {
-      font-size: 0.9rem;
-      color: #454444;
-      // line-height: 1.3;
-      padding: 1.2rem;
-      padding-bottom: 1.8rem;
-    }
-  }
-
-.videos {
-  text-align: center;
-  margin: 4rem 0;
-
-  &__title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
-
   .video-carousel {
+    padding: 0 2rem 1rem 2rem;
     .video-item {
-      padding: 1rem;
+      padding: 0 1rem;
+      
       iframe {
         width: 100%;
         height: 300px;
@@ -299,8 +311,44 @@ transition: transform 0.3s ease;
       }
       p {
         font-size: 1rem;
-        color: #555;
+        color: #414040;
       }
     }
   }
 }
+
+@media (max-width: 768px) {
+  .vertical-dots {
+    position: absolute;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slick-dots {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .slick-dots li {
+    margin: 5px 0; // Space between dots
+    width: auto;
+
+ 
+  }
+}
+
+
+// .slick-dots li button:before {
+//   color: #80133f !important; /* Change to your preferred color */
+
+//   opacity: 0.5; /* Make inactive dots slightly transparent */
+
+// }
+
