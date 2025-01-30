@@ -135,6 +135,30 @@ const Home = () => {
           </div>
         </section>
 
+ {/* Vimeo Videos Section */}
+ <section className="videos">
+          <h2 className="videos__title">Our Videos</h2>
+          <Slider {...settings} className="video-carousel">
+            {videos.map((video) => (
+              <div key={video.uri} className="video-item">
+                <iframe
+                  src={`https://player.vimeo.com/video/${
+                    video.uri.split("/")[2]
+                  }`}
+                  title={video.name}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <p>{video.name}</p>
+              </div>
+            ))}
+          </Slider>
+        </section>
+
+
+
+
         <section className="expect">
           <div className="expect__container">
             <h2 className="expect__title">What we offer</h2>
@@ -148,18 +172,26 @@ const Home = () => {
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
-                <p className="expect__text">Beautiful visuals, shot in 4k</p>
+                <p className="expect__text">
+                  Every moment we capture is filmed with professional equipment
+                  in stunning 4K UHD, ensuring breathtaking visuals and
+                  cinematic quality throughout your wedding video.
+                </p>
               </div>
               <div className="expect__feature">
                 <h3 className="expect__heading">
-                  Professional Audio and Colour Correction
+              Audio and Colour Correction
                 </h3>
                 <img
                   src={colour}
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
-                <p className="expect__text">High quality microphones</p>
+                <p className="expect__text">
+                  We capture crystal-clear audio of every heartfelt moment for
+                  you to cherish forever. Our professional color correction preserves
+                  the natural vibrancy of your special day.
+                </p>
               </div>
               <div className="expect__feature">
                 <h3 className="expect__heading">Elegant Storytelling</h3>
@@ -168,7 +200,11 @@ const Home = () => {
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
-                <p className="expect__text">Emotional, engaging films</p>
+                <p className="expect__text">
+                  We focus on crafting a unique story and setting the perfect
+                  mood, thoughtfully tailored to reflect the essence of your
+                  relationship.
+                </p>
               </div>
             </div>
             <div className="expect__bottom">
@@ -179,7 +215,10 @@ const Home = () => {
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
-                <p className="expect__text">Capture every moment</p>
+                <p className="expect__text">
+                  We may be booked for the entire day, ensuring every cherished
+                  moment of your celebration is beautifully captured.
+                </p>
               </div>
               <div className="expect__feature">
                 <h3 className="expect__heading">Competitive prices</h3>
@@ -189,7 +228,7 @@ const Home = () => {
                   className="expect__image"
                 />
                 <p className="expect__text">
-                  No hidden fees. Our buisness is built on honesty and upfront
+                  No hidden fees. Our business is built on honesty and upfront
                   communication.{" "}
                 </p>
               </div>
@@ -208,135 +247,12 @@ const Home = () => {
             </div>
           </div>
 
-          {/* <div class="container">
-	<div class="boxes">
-		<div class="box">
-			<p class="icon">Cinematic Quality</p>
-      <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			The King can move just one square at a time in any direction. It should be defended at all times by the other pieces as once checkmated the game is lost.
-		</div>
-		<div class="box">
-			<p class="icon">Professional Audio</p>
-      <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			The most powerful piece on the board, the Queen can move any number of squares in straight lines or on the diagonal until obstructed by another piece.
-		</div>
-		<div class="box">
-			<p class="icon">Elegant Storytelling</p>
-      <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			After the Queen the Rook is the next most powerful piece on the board. It can move any number of squares in a straight line until obstructed by another piece.
-		</div>
-	</div>
-	<div class="boxes">
-		<div class="box">
-			<p class="icon">Full Day Coverage</p>
-      <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			The Bishop can move any number of squares on the diagonal until obstructed by another piece. Each Bishop will always occupy squares of the same colour as it's starting square.
-		</div>
-		<div class="box">
-			<p class="icon">Competitive prices</p>
-      <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			The Knight can move to any of the eight squares of the opposite colour to the one on which it stands that are either two ranks or two files away. It's move is not obstructed by other pieces.
-		</div>
-		<div class="box">
-			<p class="icon">Personal touch</p>
-		  <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-			Considered the weakest piece on the board the Pawn can only move forward one square at a time on the same file, except for it's first move when it can move two squares forward. On reaching the eighth rank a Pawn can be promoted to the value of any other piece.
-		</div>
-	</div> */}
-
-          {/* </div>  */}
-          {/* <div className="expect__offers">
-         
-          <div className="expect__features">
-            <div className="feature">
-              <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Cinematic Quality</h3>
-              <p className="feature__text">Beautiful visuals, shot in 4k</p>
-            </div>
-            <div className="feature">
-              <img
-                src={two}
-                alt="Professional Audio"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Professional Audio</h3>
-              <p className="feature__text">High quality microphones</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Elegant Storytelling"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Elegant Storytelling</h3>
-              <p className="feature__text">Emotional, engaging films</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Full Day Coverage"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Full Day Coverage</h3>
-              <p className="feature__text">Capture every moment</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Full Day Coverage"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Competitive prices</h3>
-              <p className="feature__text">
-                No hidden fees. Our buisness is built on honesty and upfront
-                communication.{" "}
-              </p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Full Day Coverage"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Personal touch</h3>
-              <p className="feature__text">
-                We care about you and your special day. 24/7 communication with
-                us is available.{" "}
-              </p>
-            </div>
-          </div>
-          </div>
-          </div> */}
           {/* <button className="hero__cta">Check out Packages & Prices</button> */}
         </section>
+
+
+
+
 
         {/* What to Expect Section */}
         <section className="packages">
@@ -395,7 +311,7 @@ const Home = () => {
           <button className="hero__cta">Find out more</button>
         </section>
 
-        {/* Vimeo Videos Section */}
+        {/* Vimeo Videos Section
         <section className="videos">
           <h2 className="videos__title">Our Videos</h2>
           <Slider {...settings} className="video-carousel">
@@ -414,7 +330,7 @@ const Home = () => {
               </div>
             ))}
           </Slider>
-        </section>
+        </section> */}
       </main>
     </>
   );
