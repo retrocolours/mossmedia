@@ -168,11 +168,7 @@ const Home = () => {
               </div>
             ))}
           </Slider>
-
         </section>
-
-
-
 
         <section className="expect">
           {/* <div className="expect__container"> */}
