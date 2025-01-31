@@ -42,7 +42,7 @@ const Home = () => {
     fetchVideos();
   }, []);
 
-  //   Slider settings for the carousel
+    // Slider settings for the carousel
   const settings = {
     dots: true,
     infinite: true,
@@ -74,6 +74,8 @@ const Home = () => {
       },
     ],
   };
+
+  
 
   return (
     <>

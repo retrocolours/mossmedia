@@ -326,15 +326,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
   }
 
-  .slick-dots {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
+  // .slick-dots {
+  //   display: flex !important;
+  //   flex-direction: row !important;
+  //   // justify-content: center;
+  //   align-items: center;
+  //   height: auto;
+  // }
 
   .slick-dots li {
     margin: 5px 0; // Space between dots
@@ -345,10 +346,6 @@
 }
 
 
-// .slick-dots li button:before {
-//   color: #80133f !important; /* Change to your preferred color */
 
-//   opacity: 0.5; /* Make inactive dots slightly transparent */
 
-// }
 
