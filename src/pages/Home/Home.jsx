@@ -5,7 +5,6 @@ import "./Home.scss";
 import one from "../../assets/Images/one.jpg";
 import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
-// import four from "../../assets/Images/four.jpg";
 import five from "../../assets/Images/five.jpg";
 import six from "../../assets/Images/six.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
@@ -13,7 +12,6 @@ import touch from "../../assets/Images/touch.jpg";
 import story from "../../assets/Images/story.jpg";
 import ring from "../../assets/Images/ring.jpg";
 import colour from "../../assets/Images/colour.jpg";
-// import cake from "../../assets/Images/cake.jpg";
 import wine from "../../assets/Images/wine.jpg";
 import people from "../../assets/Images/people.jpg";
 
@@ -148,27 +146,27 @@ const Home = () => {
           </div>
         </section>
 
- <section className="videos">
+        <section className="videos">
   <div className="videos__container">
-          <h2 className="videos__title">Our Videos</h2>
-          </div>
-          <Slider {...settings} className="video-carousel">
-            {videos.map((video) => (
-              <div key={video.uri} className="video-item">
-                <iframe
-                  src={`https://player.vimeo.com/video/${
-                    video.uri.split("/")[2]
-                  }`}
-                  title={video.name}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <p>{video.name}</p>
-              </div>
-            ))}
-          </Slider>
-        </section>
+    <h2 className="videos__title">Our Videos</h2>
+  </div>
+  <Slider {...settings} className="videos__carousel">
+    {videos.map((video) => (
+      <div key={video.uri} className="videos__item">
+        <iframe
+          src={`https://player.vimeo.com/video/${video.uri.split("/")[2]}`}
+          title={video.name}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p className="videos__caption">{video.name}</p>
+      </div>
+    ))}
+  </Slider>
+  <button className="videos__cta">Our Portfolio</button>
+</section>
+
 
         <section className="expect">
           {/* <div className="expect__container"> */}

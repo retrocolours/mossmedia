@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/Logos/logo.png";
 import "./Header.scss";
-//add links and navlinks
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,24 +31,24 @@ const Header = () => {
         <div className={`nav__menu ${menuOpen ? "nav__menu--open" : ""}`}>
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="/portfolio" className="nav__link">
+            <Link to="/portfolio" className="nav__link">
               Portfolio
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a href="/services" className="nav__link">
+            <Link to="/services" className="nav__link">
               Services & Pricing
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a href="/about" className="nav__link">
+            <Link to="/about" className="nav__link">
               Meet Us
-            </a>
+            </Link>
           </li>
           <li className="nav__item--mobile">
-            <a href="/contact" className="nav__link">
+            <Link to="/contact" className="nav__link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <Link to="/contact">
