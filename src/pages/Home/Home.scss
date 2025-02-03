@@ -91,7 +91,7 @@
 }
 
 .about {
-  padding: 2rem 0;
+  padding: 2rem 0 4rem 0;
   background: #f9f9f9;
   text-align: center;
   font-family: "Shippori Mincho B1", serif;
@@ -180,8 +180,9 @@
   display: flex;
   flex-direction: column;
   // background-color: #efeeee;
-  background-color: #faf5f2;
-  padding: 1rem 0;
+  // background-color: #faf5f2;
+  background: #f9f9f9;
+  padding: 2rem 0;
   font-family: "Shippori Mincho B1", serif;
 
   &__container {
@@ -295,7 +296,7 @@
 .videos {
   padding: 2rem 0;
   text-align: center;
-  background-color: #f2f1f1e7;
+  background-color: #18510d25;
   height: 650px;
   font-family: "Shippori Mincho B1", serif;
 
@@ -380,5 +381,58 @@
       margin: 5px 0;
       width: auto;
     }
+  }
+}
+
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  font-family: "Shippori Mincho B1", serif;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #18510d25;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: #80133f;
+    font-style: italic;
+    // color: #850237; //darker
+    // padding-bottom: 2rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    // background: #3e0122;
+    border-bottom: 1px solid #80133f;
+    max-width: 250px; //add this as a mixin
+    padding: 0.5rem 1rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+  }
+
+  &__image-container {
+    width: 300px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden; 
+  }
+
+  &__image {
+    width: 100%; /* Or set a specific width */
+    height: 100%; /* Set a uniform height */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 100px;
+    object-position: center;
+
   }
 }
