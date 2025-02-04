@@ -18,7 +18,7 @@ import pearl2 from "../../assets/Images/pearl2.png";
 import silver from "../../assets/Images/silver.png";
 import gold from "../../assets/Images/gold.png";
 import diamond from "../../assets/Images/diamond.png";
-import custom1 from "../../assets/Images/custom1.png";
+
 
 
 
@@ -49,13 +49,7 @@ const Home = () => {
     fetchVideos();
   }, []);
 
-  // if (isLoading) {
-  //   return <div className="portfolio__loading">Our videos are loading...</div>;
-  // }
-
-  // if (videos.length === 0) {
-  //   return <div className="portfolio__empty">No videos available</div>;
-  // }
+ 
 
     // Slider settings for the carousel
   const settings = {
@@ -287,64 +281,66 @@ const Home = () => {
           <div className="packages__container">
           <h2 className="packages__title">Our Packages</h2>
           </div>
+          <div className="packages__box">
           <div className="packages__items">
-            <div className="packages__item">
+    
+               <div className="packages__item">
+              <h3 className="packages__name">Diamond:</h3>
+              <h4 className="packages__highlight">Best Value</h4>
               <div className="packages__image-container">
-              <img className="packages__image" src={diamond} alt="Pearl Package" />
+              <img
+                src={diamond}
+                alt="Full Day Coverage"
+                className="packages__image"
+              />
               </div>
-              <h3 className="package__name">Diamond: Best value</h3>
-              <p className="package__text">
-                A Full Day of Footage (Preparation, ceremony and reception.)
-              </p>
+              <p className="packages__text">A Full Day of Footage</p>
+              <p className="packages__text">Preparation, Ceremony & Reception</p>
             </div>
+
             <div className="packages__item">
-            <div className="packages__image-container">
+              <h3 className="packages__name">Gold:</h3>
+              <h4 className="packages__highlight">Most Popular</h4>
+              <div className="packages__image-container">
               <img
                 src={gold}
                 alt="Professional Audio"
                 className="packages__image"
               />
               </div>
-              <h3 className="packages__name">Gold: Most Popular</h3>
               <p className="packages__text">Ceremony & Reception</p>
             </div>
+
             <div className="packages__item">
-           <div className="packages__image-container">
+              <h3 className="packages__name">
+                Silver:
+              </h3>
+              <h4 className="packages__highlight">Classic & Unforgettable</h4>
+              <div className="packages__image-container">
               <img
                 src={silver}
                 alt="Elegant Storytelling"
                 className="packages__image"
               />
               </div>
-              <h3 className="packages__name">
-                Silver: Classic & Unforgettable
-              </h3>
               <p className="packages__text">Preparation & Ceremony</p>
             </div>
+
             <div className="packages__item">
-            <div className="packages__image-container">
+              <h3 className="packages__name">Pearl:</h3>
+              <h4 className="packages__highlight">Simple & Elegant</h4>
+              <div className="packages__image-container">
               <img
                 src={pearl2}
                 alt="Full Day Coverage"
                 className="packages__image"
               />
               </div>
-              <h3 className="packages__name">Pearl: Simple & Elegant</h3>
               <p className="packages__text">Ceremony</p>
             </div>
-            {/* <div className="packages__item">
-            <div className="packages__image-container">
-              <img
-                src={custom1}
-                alt="Full Day Coverage"
-                className="packages__image"
-              />
-              </div>
-              <h3 className="packages__name">Custom</h3>
-              <p className="packages__text">Request additions unique to you</p>
-            </div> */}
           </div>
-          <button className="hero__cta">Find out more</button>
+          <button className="packages__cta">Find out more</button>
+          </div>
         </section>
       </main>
     </>
