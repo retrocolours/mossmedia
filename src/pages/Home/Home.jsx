@@ -161,7 +161,6 @@ const Home = () => {
   <div className="videos__container">
     <h2 className="videos__title">Our Videos</h2>
   </div>
-
   <div>
     {isLoading ? (
       <div className="videos__loading">Our videos are loading...</div>
@@ -278,70 +277,34 @@ const Home = () => {
         </section>
 
         <section className="packages">
-          <div className="packages__container">
-          <h2 className="packages__title">Our Packages</h2>
-          </div>
-          <div className="packages__box">
-          <div className="packages__items">
-    
-               <div className="packages__item">
-              <h3 className="packages__name">Diamond:</h3>
-              <h4 className="packages__highlight">Best Value</h4>
-              <div className="packages__image-container">
-              <img
-                src={diamond}
-                alt="Full Day Coverage"
-                className="packages__image"
-              />
-              </div>
-              <p className="packages__text">A Full Day of Footage</p>
-              <p className="packages__text">Preparation, Ceremony & Reception</p>
-            </div>
+          
+      <div className="packages__card packages__card--apps">
+        <h3 className="packages__title">Best Value</h3>
+        <h1 className="packages__headline">Diamond:</h1>
+        <p className="packages__description">A Full Day of Footage</p>
+        <p className="packages__description">Preparation, Ceremony & Reception</p>
+        {/* <button className="packages__cta">View Details</button> */}
+      </div>
+      <div className="packages__card packages__card--software">
+        <h3 className="packages__title">Most Popular</h3>
+        <h1 className="packages__headline">Gold:</h1>
+        <p className="packages__description">Ceremony & Reception</p>
+      </div>
+      <div className="packages__card packages__card--ai">
+        <h3 className="packages__title">Classic & Unforgettable</h3>
+        <h1 className="packages__headline">Silver</h1>
+        <p className="packages__description">Preparation & Ceremony</p>
+      </div>
+      <div className="packages__card packages__card--webdesign">
+        <h3 className="packages__title">Simple & Elegant</h3>
+        <h1 className="packages__headline">Pearl</h1>
+        <p className="packages__description">Ceremony</p>
+      </div>
+  
+    </section>
 
-            <div className="packages__item">
-              <h3 className="packages__name">Gold:</h3>
-              <h4 className="packages__highlight">Most Popular</h4>
-              <div className="packages__image-container">
-              <img
-                src={gold}
-                alt="Professional Audio"
-                className="packages__image"
-              />
-              </div>
-              <p className="packages__text">Ceremony & Reception</p>
-            </div>
+       
 
-            <div className="packages__item">
-              <h3 className="packages__name">
-                Silver:
-              </h3>
-              <h4 className="packages__highlight">Classic & Unforgettable</h4>
-              <div className="packages__image-container">
-              <img
-                src={silver}
-                alt="Elegant Storytelling"
-                className="packages__image"
-              />
-              </div>
-              <p className="packages__text">Preparation & Ceremony</p>
-            </div>
-
-            <div className="packages__item">
-              <h3 className="packages__name">Pearl:</h3>
-              <h4 className="packages__highlight">Simple & Elegant</h4>
-              <div className="packages__image-container">
-              <img
-                src={pearl2}
-                alt="Full Day Coverage"
-                className="packages__image"
-              />
-              </div>
-              <p className="packages__text">Ceremony</p>
-            </div>
-          </div>
-          <button className="packages__cta">Find out more</button>
-          </div>
-        </section>
       </main>
     </>
   );
