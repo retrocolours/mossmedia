@@ -11,7 +11,6 @@
     object-fit: cover;
   }
 
-  /* Top Section */
   &__intro {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,6 @@
   margin: 2rem 0;
 }
 
-/* Team Section */
 .team {
   display: flex;
   flex-direction: column;
@@ -66,12 +64,10 @@
     padding-bottom: 1rem;
     border-bottom: 1px solid black;
 
-    /* Default for images on the right */
     &--image-right {
       flex-direction: row;
     }
 
-    /* Alternate for images on the left */
     &--image-left {
       flex-direction: row-reverse;
     }
@@ -87,8 +83,6 @@
       height: auto;
       border-radius: 8px;
       border: 1px solid #ddd;
-      //     width: 200px;
-      //   height: 200px;
       object-fit: cover;
     }
   }
@@ -117,7 +111,6 @@
   }
 }
 
-/* CTA Section */
 .section-three {
   display: flex;
   justify-content: center;

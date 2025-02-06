@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "./Home.scss";
-// import one from "../../assets/Images/one.jpg";
-// import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
 import five from "../../assets/Images/five.jpg";
 import six from "../../assets/Images/six.jpg";
@@ -14,13 +13,6 @@ import ring from "../../assets/Images/ring.jpg";
 import colour from "../../assets/Images/colour.jpg";
 import wine from "../../assets/Images/wine.jpg";
 import people from "../../assets/Images/people.jpg";
-import pearl2 from "../../assets/Images/pearl2.png";
-import silver from "../../assets/Images/silver.png";
-import gold from "../../assets/Images/gold.png";
-import diamond from "../../assets/Images/diamond.png";
-
-
-
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -38,8 +30,8 @@ const Home = () => {
             },
           }
         );
-        
-        setVideos(response.data.data); // Vimeo API returns video data in the `data` field
+
+        setVideos(response.data.data);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching videos:", error);
@@ -49,9 +41,7 @@ const Home = () => {
     fetchVideos();
   }, []);
 
- 
-
-    // Slider settings for the carousel
+  // Slider settings for the carousel
   const settings = {
     dots: true,
     infinite: true,
@@ -63,7 +53,6 @@ const Home = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-  
         },
       },
       {
@@ -71,20 +60,18 @@ const Home = () => {
         settings: {
           slidesToShow: 1,
           dots: true,
-          vertical: true, // Enables vertical dots
-          verticalSwiping: true, // Enables vertical swiping
+          vertical: true,
+          verticalSwiping: true,
           arrows: false,
-        appendDots: (dots) => (
-          <div className="vertical-dots">
-            <ul>{dots}</ul>
-          </div>
-        ),
+          appendDots: (dots) => (
+            <div className="vertical-dots">
+              <ul>{dots}</ul>
+            </div>
+          ),
         },
       },
     ],
   };
-
-  
 
   return (
     <>
@@ -158,39 +145,40 @@ const Home = () => {
         </section>
 
         <section className="videos">
-  <div className="videos__container">
-    <h2 className="videos__title">Our Videos</h2>
-  </div>
-  <div>
-    {isLoading ? (
-      <div className="videos__loading">Our videos are loading...</div>
-    ) : videos.length === 0 ? (
-      <div className="videos__empty">No videos available</div>
-    ) : (
-      <>
-        <Slider {...settings} className="videos__carousel">
-          {videos.map((video) => (
-            <div key={video.uri} className="videos__item">
-              <iframe
-                src={`https://player.vimeo.com/video/${video.uri.split("/")[2]}`}
-                title={video.name}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <p className="videos__caption">{video.name}</p>
-            </div>
-          ))}
-        </Slider>
-        <button className="videos__cta">Our Portfolio</button>
-      </>
-    )}
-  </div>
-  
-</section>
+          <div className="videos__container">
+            <h2 className="videos__title">Our Videos</h2>
+          </div>
+          <div>
+            {isLoading ? (
+              <div className="videos__loading">Our videos are loading...</div>
+            ) : videos.length === 0 ? (
+              <div className="videos__empty">No videos available</div>
+            ) : (
+              <>
+                <Slider {...settings} className="videos__carousel">
+                  {videos.map((video) => (
+                    <div key={video.uri} className="videos__item">
+                      <iframe
+                        src={`https://player.vimeo.com/video/${
+                          video.uri.split("/")[2]
+                        }`}
+                        title={video.name}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      <p className="videos__caption">{video.name}</p>
+                    </div>
+                  ))}
+                </Slider>
+                <button className="videos__cta">Our Portfolio</button>
+              </>
+            )}
+          </div>
+        </section>
 
         <section className="expect">
-            <h2 className="expect__title">What we offer</h2>
+          <h2 className="expect__title">What we offer</h2>
           <div className="expect__features">
             <div className="expect__top">
               <div className="expect__feature">
@@ -207,9 +195,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="expect__feature">
-                <h3 className="expect__heading">
-              Audio and Colour Correction
-                </h3>
+                <h3 className="expect__heading">Audio and Colour Correction</h3>
                 <img
                   src={colour}
                   alt="Cinematic Quality"
@@ -217,8 +203,8 @@ const Home = () => {
                 />
                 <p className="expect__text">
                   We capture crystal-clear audio of every heartfelt moment for
-                  you to cherish forever. Our professional color correction preserves
-                  the natural vibrancy of your special day.
+                  you to cherish forever. Our professional color correction
+                  preserves the natural vibrancy of your special day.
                 </p>
               </div>
               <div className="expect__feature">
@@ -277,34 +263,39 @@ const Home = () => {
         </section>
 
         <section className="packages">
-          
-      <div className="packages__card packages__card--apps">
-        <h3 className="packages__title">Best Value</h3>
-        <h1 className="packages__headline">Diamond:</h1>
-        <p className="packages__description">A Full Day of Footage</p>
-        <p className="packages__description">Preparation, Ceremony & Reception</p>
-        {/* <button className="packages__cta">View Details</button> */}
-      </div>
-      <div className="packages__card packages__card--software">
-        <h3 className="packages__title">Most Popular</h3>
-        <h1 className="packages__headline">Gold:</h1>
-        <p className="packages__description">Ceremony & Reception</p>
-      </div>
-      <div className="packages__card packages__card--ai">
-        <h3 className="packages__title">Classic & Unforgettable</h3>
-        <h1 className="packages__headline">Silver</h1>
-        <p className="packages__description">Preparation & Ceremony</p>
-      </div>
-      <div className="packages__card packages__card--webdesign">
-        <h3 className="packages__title">Simple & Elegant</h3>
-        <h1 className="packages__headline">Pearl</h1>
-        <p className="packages__description">Ceremony</p>
-      </div>
-  
-    </section>
+          <div className="packages__card packages__card--diamond">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Best Value</h3>
+              <h1 className="packages__headline">Diamond:</h1>
+              <p className="packages__description">A Full Day of Footage</p>
+              <p className="packages__description">
+                Preparation, Ceremony & Reception
+              </p>
+            </Link>
+          </div>
 
-       
-
+          <div className="packages__card packages__card--gold">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Most Popular</h3>
+              <h1 className="packages__headline">Gold:</h1>
+              <p className="packages__description">Ceremony & Reception</p>
+            </Link>
+          </div>
+          <div className="packages__card packages__card--silver">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Classic & Unforgettable</h3>
+              <h1 className="packages__headline">Silver</h1>
+              <p className="packages__description">Preparation & Ceremony</p>
+            </Link>
+          </div>
+          <div className="packages__card packages__card--pearl">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Simple & Elegant</h3>
+              <h1 className="packages__headline">Pearl</h1>
+              <p className="packages__description">Ceremony</p>
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   );

@@ -1,40 +1,40 @@
 .confirmation-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #fdf6e3; // Light warm background
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #fdf6e3;
 
-    h1 {
-        color: #4caf50;
-        margin: 20px 0;
-        font-size: 2rem;
+  h1 {
+    color: #4caf50;
+    margin: 20px 0;
+    font-size: 2rem;
+  }
+
+  p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  .success-animation {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #45a049;
     }
-
-    p {
-        color: #333;
-        margin-bottom: 20px;
-        font-size: 1.2rem;
-    }
-
-    .success-animation {
-        margin-bottom: 20px;
-    }
-
-    button {
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: #45a049;
-        }
-    }
+  }
 }
