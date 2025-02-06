@@ -18,7 +18,12 @@ const Portfolio = () => {
             },
           }
         );
-        setVideos(response.data.data);
+
+        const weddingVideos = response.data.data.filter((video) =>
+          video.tags.some((tag) => tag.name.toLowerCase() === "wedding")
+        );
+
+        setVideos(weddingVideos);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching videos:", error);
