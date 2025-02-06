@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "./Home.scss";
-import one from "../../assets/Images/one.jpg";
-import two from "../../assets/Images/two.jpg";
 import three from "../../assets/Images/three.jpg";
-// import four from "../../assets/Images/four.jpg";
 import five from "../../assets/Images/five.jpg";
 import six from "../../assets/Images/six.jpg";
 import teaser from "../../assets/Videos/teaser.mp4";
@@ -13,13 +11,12 @@ import touch from "../../assets/Images/touch.jpg";
 import story from "../../assets/Images/story.jpg";
 import ring from "../../assets/Images/ring.jpg";
 import colour from "../../assets/Images/colour.jpg";
-// import cake from "../../assets/Images/cake.jpg";
 import wine from "../../assets/Images/wine.jpg";
 import people from "../../assets/Images/people.jpg";
 
-
 const Home = () => {
   const [videos, setVideos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Fetch Vimeo videos
   useEffect(() => {
@@ -33,7 +30,9 @@ const Home = () => {
             },
           }
         );
-        setVideos(response.data.data); // Vimeo API returns video data in the `data` field
+
+        setVideos(response.data.data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching videos:", error);
       }
@@ -42,7 +41,7 @@ const Home = () => {
     fetchVideos();
   }, []);
 
-    // Slider settings for the carousel
+  // Slider settings for the carousel
   const settings = {
     dots: true,
     infinite: true,
@@ -54,7 +53,6 @@ const Home = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-  
         },
       },
       {
@@ -62,20 +60,18 @@ const Home = () => {
         settings: {
           slidesToShow: 1,
           dots: true,
-          vertical: true, // Enables vertical dots
-          verticalSwiping: true, // Enables vertical swiping
+          vertical: true,
+          verticalSwiping: true,
           arrows: false,
-        appendDots: (dots) => (
-          <div className="vertical-dots">
-            <ul>{dots}</ul>
-          </div>
-        ),
+          appendDots: (dots) => (
+            <div className="vertical-dots">
+              <ul>{dots}</ul>
+            </div>
+          ),
         },
       },
     ],
   };
-
-  
 
   return (
     <>
@@ -148,36 +144,41 @@ const Home = () => {
           </div>
         </section>
 
- <section className="videos">
-  <div className="videos__container">
-          <h2 className="videos__title">Our Videos</h2>
+        <section className="videos">
+          <div className="videos__container">
+            <h2 className="videos__title">Our Videos</h2>
           </div>
-          <Slider {...settings} className="video-carousel">
-            {videos.map((video) => (
-              <div key={video.uri} className="video-item">
-                <iframe
-                  src={`https://player.vimeo.com/video/${
-                    video.uri.split("/")[2]
-                  }`}
-                  title={video.name}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <p>{video.name}</p>
-              </div>
-            ))}
-          </Slider>
-
+          <div>
+            {isLoading ? (
+              <div className="videos__loading">Our videos are loading...</div>
+            ) : videos.length === 0 ? (
+              <div className="videos__empty">No videos available</div>
+            ) : (
+              <>
+                <Slider {...settings} className="videos__carousel">
+                  {videos.map((video) => (
+                    <div key={video.uri} className="videos__item">
+                      <iframe
+                        src={`https://player.vimeo.com/video/${
+                          video.uri.split("/")[2]
+                        }`}
+                        title={video.name}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      <p className="videos__caption">{video.name}</p>
+                    </div>
+                  ))}
+                </Slider>
+                <button className="videos__cta">Our Portfolio</button>
+              </>
+            )}
+          </div>
         </section>
 
-
-
-
         <section className="expect">
-          {/* <div className="expect__container"> */}
-            <h2 className="expect__title">What we offer</h2>
-          {/* </div> */}
+          <h2 className="expect__title">What we offer</h2>
           <div className="expect__features">
             <div className="expect__top">
               <div className="expect__feature">
@@ -194,9 +195,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="expect__feature">
-                <h3 className="expect__heading">
-              Audio and Colour Correction
-                </h3>
+                <h3 className="expect__heading">Audio and Colour Correction</h3>
                 <img
                   src={colour}
                   alt="Cinematic Quality"
@@ -204,8 +203,8 @@ const Home = () => {
                 />
                 <p className="expect__text">
                   We capture crystal-clear audio of every heartfelt moment for
-                  you to cherish forever. Our professional color correction preserves
-                  the natural vibrancy of your special day.
+                  you to cherish forever. Our professional color correction
+                  preserves the natural vibrancy of your special day.
                 </p>
               </div>
               <div className="expect__feature">
@@ -261,91 +260,42 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          {/* <button className="hero__cta">Check out Packages & Prices</button> */}
         </section>
 
-
-
-
-
-        {/* What to Expect Section */}
         <section className="packages">
-          <h2 className="packages__title">Packages</h2>
-          <div className="packages__features">
-            <div className="feature">
-              <img
-                src={three}
-                alt="Cinematic Quality"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Diamond: Best value</h3>
-              <p className="feature__text">
-                A Full Day of Footage (Preparation, ceremony and reception.)
+          <div className="packages__card packages__card--diamond">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Best Value</h3>
+              <h1 className="packages__headline">Diamond:</h1>
+              <p className="packages__description">A Full Day of Footage</p>
+              <p className="packages__description">
+                Preparation, Ceremony & Reception
               </p>
-            </div>
-            <div className="feature">
-              <img
-                src={two}
-                alt="Professional Audio"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Gold: Most Popular</h3>
-              <p className="feature__text">Ceremony & Reception</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Elegant Storytelling"
-                className="feature__image"
-              />
-              <h3 className="feature__title">
-                Silver: Classic & Unforgettable
-              </h3>
-              <p className="feature__text">Preparation & Ceremony</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Full Day Coverage"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Pearl: Simple & Elegant</h3>
-              <p className="feature__text">Ceremony</p>
-            </div>
-            <div className="feature">
-              <img
-                src={one}
-                alt="Full Day Coverage"
-                className="feature__image"
-              />
-              <h3 className="feature__title">Custom</h3>
-              <p className="feature__text">Request additions unique to you</p>
-            </div>
+            </Link>
           </div>
-          <button className="hero__cta">Find out more</button>
-        </section>
 
-        {/* Vimeo Videos Section
-        <section className="videos">
-          <h2 className="videos__title">Our Videos</h2>
-          <Slider {...settings} className="video-carousel">
-            {videos.map((video) => (
-              <div key={video.uri} className="video-item">
-                <iframe
-                  src={`https://player.vimeo.com/video/${
-                    video.uri.split("/")[2]
-                  }`}
-                  title={video.name}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <p>{video.name}</p>
-              </div>
-            ))}
-          </Slider>
-        </section> */}
+          <div className="packages__card packages__card--gold">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Most Popular</h3>
+              <h1 className="packages__headline">Gold:</h1>
+              <p className="packages__description">Ceremony & Reception</p>
+            </Link>
+          </div>
+          <div className="packages__card packages__card--silver">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Classic & Unforgettable</h3>
+              <h1 className="packages__headline">Silver</h1>
+              <p className="packages__description">Preparation & Ceremony</p>
+            </Link>
+          </div>
+          <div className="packages__card packages__card--pearl">
+            <Link to="/services" className="packages__link">
+              <h3 className="packages__title">Simple & Elegant</h3>
+              <h1 className="packages__headline">Pearl</h1>
+              <p className="packages__description">Ceremony</p>
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   );

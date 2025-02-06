@@ -141,10 +141,13 @@ const Services = () => {
           <p className="package-card__description">Includes:</p>
           <ul className="package-card__features">
             <li>
-              <FaCheck className="package-card__icon" />A 4-6 minute highlight film covering any preparations all the way until the end of the wedding ceremony, edited to music and delivered in 4K.
+              <FaCheck className="package-card__icon" />A 4-6 minute highlight
+              film covering any preparations all the way until the end of the
+              wedding ceremony, edited to music and delivered in 4K.
             </li>
             <li>
-              <FaCheck className="package-card__icon" />A 1-minute trailer-style video of your wedding day, perfect for sharing on social media.
+              <FaCheck className="package-card__icon" />A 1-minute trailer-style
+              video of your wedding day, perfect for sharing on social media.
             </li>
             <li>
               <FaCheck className="package-card__icon" />
@@ -176,19 +179,21 @@ const Services = () => {
             className="package-card__image"
           />
           <h2 className="package-card__name">Pearl Package</h2>
-          <h3 className="package-card__tagline">
-            Simple & Elegant
-          </h3>
+          <h3 className="package-card__tagline">Simple & Elegant</h3>
           <p className="package-card__description">Ceremony Only</p>
           <p className="package-card__description">
-          The entire ceremony, regardless of where it is held, is recorded in full and edited together.
+            The entire ceremony, regardless of where it is held, is recorded in
+            full and edited together.
           </p>
           <ul className="package-card__features">
             <li>
-              <FaCheck className="package-card__icon" />A 3-5 minute highlight film covering the wedding ceremony, Video will be edited to music and delivered in 4K.
+              <FaCheck className="package-card__icon" />A 3-5 minute highlight
+              film covering the wedding ceremony, Video will be edited to music
+              and delivered in 4K.
             </li>
             <li>
-              <FaCheck className="package-card__icon" />A 1-minute trailer-style video of your wedding day, perfect for sharing on social media.
+              <FaCheck className="package-card__icon" />A 1-minute trailer-style
+              video of your wedding day, perfect for sharing on social media.
             </li>
             <li>
               <FaCheck className="package-card__icon" />
@@ -215,7 +220,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Additional Services Section */}
       <div className="addons-section">
         <h2 className="addons-section__title">Additional Services & Addons</h2>
         <p className="addons-section__subtitle">

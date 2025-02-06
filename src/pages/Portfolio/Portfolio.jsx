@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactPlayer from "react-player";
@@ -44,12 +41,7 @@ const Portfolio = () => {
       {videos.map((video) => (
         <div className="portfolio__item" key={video.uri}>
           <div className="portfolio__player">
-            <ReactPlayer
-              url={video.link}
-              width="100%"
-              height="100%"
-              controls
-            />
+            <ReactPlayer url={video.link} width="100%" height="100%" controls />
           </div>
           <div className="portfolio__details">
             <h2 className="portfolio__title">{video.name}</h2>

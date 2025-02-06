@@ -88,7 +88,6 @@ const About = () => {
         ))}
       </section>
 
-      {/* Call to Action */}
       <section className="section-three">
         <button className="about__cta">Talk to Us</button>
       </section>
