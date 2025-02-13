@@ -34,7 +34,6 @@ const Home = () => {
         const weddingVideos = response.data.data.filter((video) =>
           video.tags.some((tag) => tag.name.toLowerCase() === "wedding")
         );
-  
 
         setVideos(weddingVideos);
         setIsLoading(false);
