@@ -295,7 +295,7 @@
   background-color: #18510d25;
   height: 650px;
   font-family: "Shippori Mincho B1", serif;
-  background-image: url(../../assets/Images/bg6.jpg);
+  // background-image: url(../../assets/Images/bg6.jpg);
   background-position: center;
   background-size: cover;
 
@@ -308,9 +308,9 @@
 
   &__title {
     font-size: 2.5rem;
-    color: #80133f;
+    color: #1a4409;
     font-style: italic;
-    border-bottom: 1px solid #80133f;
+    border-bottom: 1px solid #1a4409;
     max-width: 450px;
     padding: 0 2rem 0.4rem 1.5rem;
     font-family: "Cormorant Garamond", serif;
@@ -388,8 +388,8 @@
   height: 100vh;
   margin: 0;
   padding: 4rem;
-  background-color: #c595b663;
-  background-image: url(../../assets/Images/bg7.jpg);
+  background-color: rgba(24, 81, 13, 0.1450980392);
+  // background-image: url(../../assets/Images/bg7.jpg);
   background-size: cover;
   font-family: "Shippori Mincho B1", serif;
 
