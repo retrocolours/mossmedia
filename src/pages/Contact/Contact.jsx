@@ -47,11 +47,11 @@ const ContactUs = () => {
   return (
     <div className="contact-us">
       <div className="form-container">
-        <h1>We’ll Take Care Of Everything</h1>
-        <p>
-          If you're interested and have any questions, please fill out the form
-          below, and we will get back to you as soon as possible. Or call or
-          text us at (604) 716-1810.
+        <h1 className="form-container__title">We’ll Take Care Of Everything</h1>
+        <p className="form-container__description">
+          If you're interested in our services or have any questions, please
+          fill out this form, and we will get back to you as soon as
+          possible. You're also welcome to call or text us at +1 (604) 716-1810.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -157,7 +157,7 @@ const ContactUs = () => {
           </div>
 
           <div className="form-group">
-            <label>Are you interested in a FOMO video and footage?</label>
+            <label>Are you interested in any of the additional services?</label>
             <div>
               <label>
                 <input
@@ -238,7 +238,7 @@ const ContactUs = () => {
           </div>
 
           <button type="submit" className="submit-button">
-            Get A Quote
+            Send Form
           </button>
         </form>
       </div>

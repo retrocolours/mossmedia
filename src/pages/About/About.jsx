@@ -1,8 +1,9 @@
 import React from "react";
 import "./About.scss";
 import stefan from "../../assets/Images/stefan.jpeg";
-import tanya from "../../assets/Images/tanya.jpg";
+import tanya from "../../assets/Images/tanya.png";
 import about from "../../assets/Images/about.jpg";
+import { Link } from "react-router-dom";
 
 const employees = [
   {
@@ -12,15 +13,16 @@ const employees = [
     description: `Born and raised in Iceland, Stefan is an Icelandic-Canadian award-winning filmmaker and videographer. 
       He left his home country to pursue adventures in his second home, Canada. As a dedicated wedding videographer, 
       his passion lies in capturing the essence and magic of your special day. He believes every love story is unique and 
-      deserves to be preserved with artistry and attention to detail.`,
+      deserves to be preserved with artistry and attention to detail. In his free time enjoys finding inspiration in nature, playing boardgames with friends, and watching films that push creative boundaries.`,
   },
   {
     name: "Tatiana Privezentseva",
-    title: "Assistant Videographer & Editor",
+    title: "Assistant Videographer, Editor, Web Developer",
     image: tanya,
-    description: `Tatiana brings creativity and precision to every project. With a keen eye for detail and a passion for storytelling, 
-      she ensures every video captures the unique spirit of each event. Tatiana specializes in post-production editing, bringing moments 
-      to life through expert cuts and thoughtful composition.`,
+    description: `Tatiana is a Russian-Canadian software engineer, videographer, and editor with a passion for both technology and storytelling. 
+      She joined Moss Media to combine her technical expertise with her love for visual arts, assisting in the filming and editing process while also managing social media and client communications. 
+      With a keen eye for composition and detail, she ensures every project reflects the couple’s unique story. Her background in web development also allows her to create digital experiences that complement the cinematic work of Moss Media. 
+      In her free time, Tatiana enjoys coding, reading, and exploring artistic ways to contribute to her community.`,
   },
 ];
 
@@ -60,8 +62,8 @@ const About = () => {
         <span className="about-container__dot"></span>
       </section>
 
-      <h2 className="heading">Meet Our Team</h2>
       <section className="team">
+        <h2 className="heading">Meet Our Team</h2>
         {employees.map((employee, index) => (
           <div
             key={index}
@@ -86,10 +88,9 @@ const About = () => {
             </div>
           </div>
         ))}
-      </section>
-
-      <section className="section-three">
-        <button className="about__cta">Talk to Us</button>
+        <Link to="/contact">
+        <button className="team__cta">Tell Us Your Story</button>
+        </Link>
       </section>
     </div>
   );

@@ -1,16 +1,11 @@
 import React from "react";
 import "./Services.scss";
-// import one from "../../assets/Images/one.jpg";
-// import two from "../../assets/Images/two.jpg";
-// import three from "../../assets/Images/three.jpg";
-// import { FaCheck } from "react-icons/fa";
-// import { useEffect } from "react";
-// import gsap from "gsap";
+import { Link } from "react-router-dom";
 import diamond from "../../assets/Images/diamond.png";
 import gold2 from "../../assets/Images/gold2.jpg";
 import silver3 from "../../assets/Images/silver3.jpg";
 import pearl5 from "../../assets/Images/pearl5.png";
-// import hero from "../../assets/Images/hero.jpg";
+
 
 const services = [
   {
@@ -307,12 +302,8 @@ const Services = () => {
     <>
       <div className="wrapper">
         <section className="services-hero">
-          {/* <img src={hero} className="services-hero__image" alt="Wedding Services" /> */}
           <h1 className="services-hero__title">Our Services & Prices</h1>
         </section>
-        {/* <div className="dot-wrapper">
-<span className="dot">•</span>
-</div> */}
 
         <section class="services-comparison">
           <div class="services-comparison__container">
@@ -408,15 +399,7 @@ const Services = () => {
               Add-on Services & Extras (can be added to any package)
             </h2>
             <table class="services-comparison__table">
-              {/* <thead>
-                <tr>
-                  <th>Features</th>
-                  <th>Diamond</th>
-                  <th>Gold</th>
-                  <th>Silver</th>
-                  <th>Pearl</th>
-                </tr>
-              </thead> */}
+             
               <tbody>
                 <tr>
                   <td>Half-day of additional filming (up to 4 hours)</td>
@@ -474,7 +457,9 @@ const Services = () => {
                 </tr>
               </tbody>
             </table>
+            <Link to ="/contact">
             <button className="services-comparison__button">Book Now</button>
+            </Link>
           </div>
         </section>
         <section className="service-section">
@@ -507,87 +492,4 @@ const Services = () => {
 
 export default Services;
 
-// import React from "react";
-// import "./Services.scss";
 
-// const packages = [
-//   {
-//     name: "Diamond",
-//     includes: [
-//       "Full-day coverage from preparations to the final moments.",
-//       "6-8 minute highlight video in 4K with stabilizer gimbal.",
-//       "1-minute cinematic trailer.",
-//       "Vows recorded and intertwined (if requested).",
-//       "Edited and delivered within 4-6 weeks."
-//     ]
-//   },
-//   {
-//     name: "Gold",
-//     includes: [
-//       "8 hours of coverage.",
-//       "5-minute highlight video.",
-//       "1-minute cinematic trailer.",
-//       "Vows recorded and intertwined (if requested).",
-//       "Edited and delivered within 4-6 weeks."
-//     ]
-//   },
-//   {
-//     name: "Silver",
-//     includes: [
-//       "4-6 hours of coverage (preparation + ceremony, not party).",
-//       "5-minute highlight video in 4K with stabilizer gimbal.",
-//       "1-minute cinematic trailer.",
-//       "Vows recorded and intertwined (if requested).",
-//       "Edited and delivered within 4-6 weeks."
-//     ]
-//   },
-//   {
-//     name: "Pearl",
-//     includes: [
-//       "Covers only the wedding ceremony.",
-//       "3-minute highlight video.",
-//       "1-minute cinematic trailer.",
-//       "4K footage with stabilizer gimbal.",
-//       "Vows recorded and intertwined (if requested).",
-//       "Edited and delivered within 4-6 weeks."
-//     ]
-//   }
-// ];
-
-// const Services = () => {
-//   return (
-//     <section className="services-comparison">
-//       <div className="services-comparison__container">
-//         <div className="services-comparison__header">
-//           <h2 className="services-comparison__title">Compare Our Wedding Packages</h2>
-//         </div>
-//         <div className="services-comparison__table">
-//           <div className="services-comparison__column services-comparison__column--features">
-//             <h3 className="services-comparison__package-name">Features</h3>
-//             {packages[0].includes.map((feature, index) => (
-//               <div key={index} className="services-comparison__feature">
-//                 {feature}
-//               </div>
-//             ))}
-//           </div>
-//           {packages.map((pkg, pkgIndex) => (
-//             <div key={pkgIndex} className="services-comparison__column">
-//               <h3 className="services-comparison__package-name">{pkg.name}</h3>
-//               {packages[0].includes.map((feature, featureIndex) => (
-//                 <div key={featureIndex} className="services-comparison__indicator">
-//                   {pkg.includes.includes(feature) ? (
-//                     <span className="services-comparison__check">✔</span>
-//                   ) : (
-//                     <span className="services-comparison__cross">✖</span>
-//                   )}
-//                 </div>
-//               ))}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Services;
