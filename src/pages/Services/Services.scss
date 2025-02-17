@@ -1,172 +1,208 @@
-$primary-color: #ad0a0a;
-$hover-color: #8b0808;
-$font-family: "Playfair Display", serif; //I know I need a separate file for this, I'll move it later
+
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
-.packages-page {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  font-family: $font-family;
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-hero {
+  background-image: url(../../assets/Images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+
 
   &__title {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: bold;
-  }
-
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    font-size: 5.8rem;
+    font-family: "Allura", serif;
+    font-weight: 400;
+    // color: #fdfaf4;
+    color: #fbf0db;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
   }
 }
 
-.package-card {
-  background: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  max-width: 300px;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease;
 
-  &:hover {
-    transform: translateY(-10px);
+.service-section {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(6 5 5 / 93%);
+  padding: 1rem;
+  color: white;
+  font-family: "Shippori Mincho B1", serif;
+  // max-width: 1000px;
+  align-items: center;
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    display: block; 
+    margin: 2rem auto; 
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  &__content {
+    max-width: 500px;
+    flex: 1; 
+  }
+  &__image-container {
+    flex-shrink: 0;
   }
 
   &__image {
-    width: 100%;
-    height: 200px;
+    width: 200px; 
+    height: 200px; 
     object-fit: cover;
+    border-radius: 8px;
+    object-position: center;
   }
 
-  &__name {
-    font-size: 1.5rem;
-    color: $primary-color;
-    margin: 1rem 0 0.5rem;
-  }
+  @media (max-width: 768px) {
+    &__card {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-  &__tagline {
-    font-size: 1rem;
-    color: #555;
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  &__description {
-    font-size: 0.9rem;
-    color: #777;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-  }
-
-  &__features {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-
-    li {
-      display: flex;
-      align-items: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.5rem;
-
-      .package-card__icon {
-        font-size: 0.8rem;
-        color: $primary-color;
-        margin-right: 0.5rem;
-      }
+    &__image {
+      width: 100%;
+      height: auto;
     }
   }
 
-  &__price {
-    font-size: 1.2rem;
-    font-weight: bold;
+  @media (max-width: 480px) {
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.services-comparison {
+  background: #fad1d14a;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  // padding: 2rem 2rem;
+  // font-family: "Cinzel", serif;
+  font-family: "Shippori Mincho B1", serif;
+  text-align: center;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
     color: #333;
-    margin-bottom: 1.5rem;
+    margin: 2rem;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    min-width: 200px;
+  }
+
+  th {
+    background: #960808;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  &__green {
+    color: green;
+    // font-size: 1.5rem;
+  }
+
+  &__red {
+    color: red;
+    
   }
 
   &__button {
-    background-color: $primary-color;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
+    margin-top: 3rem;
     font-size: 1rem;
+    background-color: #f4b2b2;
+    border: 1px solid rgba(0, 0, 0, 0.065);
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 0.6rem 2.2rem;
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
 
     &:hover {
-      background-color: $hover-color;
+      background-color: #831111;
+      color: white;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__table {
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__table {
+      font-size: 0.8rem;
+    }
+
+    &__button {
+      padding: 0.6rem 1.6rem;
     }
   }
 }
 
-.addons-section {
-  padding: 2rem;
-  text-align: center;
-  background-color: #fff;
 
-  &__title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-  }
 
-  &__subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 1rem;
-  }
-
-  &__description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 2rem;
-  }
-
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-  }
-}
-
-.addon-card {
-  background: #f9f9f9;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  &__icon {
-    font-size: 2rem;
-    color: $primary-color;
-    margin-bottom: 0.5rem;
-  }
-
-  &__title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-
-  &__description {
-    font-size: 0.9rem;
-    color: #555;
-  }
-}

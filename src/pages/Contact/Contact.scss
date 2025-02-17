@@ -1,9 +1,10 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Shippori Mincho B1", serif;
   margin: 0;
   padding: 0;
   background-color: #fdfaf4;
   color: #333;
+  
 }
 
 .contact-us {
@@ -13,6 +14,9 @@ body {
   align-items: center;
   padding: 2rem;
   background-color: #fdfaf4;
+  background-image: url(../../assets/Images/contact1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .form-container {
@@ -22,6 +26,12 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 1rem;
+  opacity: 0.9;
+
+  &__title, &__description {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
 
 h1 {
@@ -68,6 +78,7 @@ textarea {
 }
 
 button.submit-button {
+  // font-family: "Cormorant Garamond", serif;
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
