@@ -1,5 +1,52 @@
+// import React, { useState } from "react";
+// import emailjs from "emailjs-com";
+// import "./Contact.scss";
+
+// const ContactUs = () => {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     weddingDate: "",
+//     location: "",
+//     package: "",
+//     fomoVideo: "",
+//     contactMethod: "",
+//     contactTime: "",
+//     additionalInfo: "",
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({ ...formData, [name]: value });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     // Initialize EmailJS
+//     emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
+
+//     try {
+//       // Send the form data to EmailJS
+//       const response = await emailjs.sendForm(
+//         process.env.REACT_APP_EMAIL_SERVICE_ID,
+//         process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+//         e.target,
+//         process.env.REACT_APP_EMAIL_PUBLIC_KEY
+//       );
+
+//       console.log("Form submitted successfully:", response);
+//       window.location.href = "/confirmation";
+//     } catch (error) {
+//       console.error("Error submitting form:", error);
+//       alert("Something went wrong. Please try again.");
+//     }
+//   };
+
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";  
 import "./Contact.scss";
 
 const ContactUs = () => {
@@ -15,6 +62,8 @@ const ContactUs = () => {
     contactTime: "",
     additionalInfo: "",
   });
+
+  const navigate = useNavigate();  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,12 +86,13 @@ const ContactUs = () => {
       );
 
       console.log("Form submitted successfully:", response);
-      window.location.href = "/confirmation";
+      navigate("/confirmation");  
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again.");
     }
   };
+
 
   return (
     <div className="contact-us">
