@@ -175,7 +175,9 @@ const Home = () => {
                     </div>
                   ))}
                 </Slider>
+                <Link to="/portfolio">
                 <button className="videos__cta">Our Portfolio</button>
+                </Link>
               </>
             )}
           </div>
