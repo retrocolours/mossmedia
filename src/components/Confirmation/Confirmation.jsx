@@ -14,7 +14,10 @@ const ConfirmationPage = () => {
   };
 
   return (
-    <div className="confirmation-page">
+    <div
+      className="confirmation-page"
+      style={{ backgroundImage: 'url("/Images/conf.jpg")' }}
+    >
       <h1>Thank You!</h1>
       <p>Your form was submitted successfully. We'll be in touch soon.</p>
       <Lottie options={defaultOptions} height={300} width={300} />

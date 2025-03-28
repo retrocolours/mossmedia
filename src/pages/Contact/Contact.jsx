@@ -1,52 +1,6 @@
-// import React, { useState } from "react";
-// import emailjs from "emailjs-com";
-// import "./Contact.scss";
-
-// const ContactUs = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     phone: "",
-//     weddingDate: "",
-//     location: "",
-//     package: "",
-//     fomoVideo: "",
-//     contactMethod: "",
-//     contactTime: "",
-//     additionalInfo: "",
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     // Initialize EmailJS
-//     emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
-
-//     try {
-//       // Send the form data to EmailJS
-//       const response = await emailjs.sendForm(
-//         process.env.REACT_APP_EMAIL_SERVICE_ID,
-//         process.env.REACT_APP_EMAIL_TEMPLATE_ID,
-//         e.target,
-//         process.env.REACT_APP_EMAIL_PUBLIC_KEY
-//       );
-
-//       console.log("Form submitted successfully:", response);
-//       window.location.href = "/confirmation";
-//     } catch (error) {
-//       console.error("Error submitting form:", error);
-//       alert("Something went wrong. Please try again.");
-//     }
-//   };
-
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { useNavigate } from "react-router-dom";  
+import { useNavigate } from "react-router-dom";
 import "./Contact.scss";
 
 const ContactUs = () => {
@@ -63,7 +17,7 @@ const ContactUs = () => {
     additionalInfo: "",
   });
 
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -86,22 +40,24 @@ const ContactUs = () => {
       );
 
       console.log("Form submitted successfully:", response);
-      navigate("/confirmation");  
+      navigate("/confirmation");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again.");
     }
   };
 
-
   return (
-    <div className="contact-us">
+    <div
+      className="contact-us"
+      style={{ backgroundImage: 'url("/Images/contact1.jpg")' }}
+    >
       <div className="form-container">
         <h1 className="form-container__title">We’ll Take Care Of Everything</h1>
         <p className="form-container__description">
           If you're interested in our services or have any questions, please
-          fill out this form, and we will get back to you as soon as
-          possible. You're also welcome to call or text us at +1 (604) 716-1810.
+          fill out this form, and we will get back to you as soon as possible.
+          You're also welcome to call or text us at +1 (604) 716-1810.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">

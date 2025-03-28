@@ -47,8 +47,28 @@ const Footer = () => {
                 </a>
               </li>
               <div className="footer__icons">
-                <FontAwesomeIcon icon={faFacebook} className="footer__icon" />
-                <FontAwesomeIcon icon={faVimeo} className="footer__icon" />
+                <a
+                  href="https://www.facebook.com/profile.php?id=61569364881077&notif_id=1742082969031275&notif_t=page_user_activity&ref=notif#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faFacebook}
+                    className="footer__icon"
+                    style={{ color: "#4267B2" }}
+                  />
+                </a>
+                <a
+                  href="https://vimeo.com/mossmediavideography"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faVimeo}
+                    className="footer__icon"
+                    style={{ color: "#1ab7ea" }}
+                  />
+                </a>
               </div>
             </ul>
           </div>
