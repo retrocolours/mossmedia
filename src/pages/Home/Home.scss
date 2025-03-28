@@ -24,7 +24,7 @@
   }
 
   &__image {
-    background: url(../../assets/Images/one.jpg) center center/cover no-repeat;
+    // background: url("/Images/one.jpg") center center / cover no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -447,25 +447,25 @@
     overflow: hidden;
 
     &--diamond {
-      background-image: url(../../assets/Images/diamond.png);
+      // background-image: url(/public/Images/diamond.png);
       background-position: center;
       background-size: cover;
     }
 
     &--gold {
-      background-image: url(../../assets/Images/gold2.jpg);
+      // background-image: url(public/Images/gold2.jpg);
       background-position: center;
       background-size: cover;
     }
 
     &--silver {
-      background-image: url(../../assets/Images/silver3.jpg);
+      // background-image: url(public/Images/silver3.jpg);
       background-position: center;
       background-size: cover;
     }
 
     &--pearl {
-      background-image: url(../../assets/Images/pearl5.png);
+      // background-image: url(public/Images/pearl5.png);
       background-position: center;
       background-size: cover;
     }

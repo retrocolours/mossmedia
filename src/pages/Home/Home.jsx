@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "./Home.scss";
-import three from "../../assets/Images/three.jpg";
-import five from "../../assets/Images/five.jpg";
-import six from "../../assets/Images/six.jpg";
-import teaser from "../../assets/Videos/teaser.mp4";
-import touch from "../../assets/Images/touch.jpg";
-import story from "../../assets/Images/story.jpg";
-import ring from "../../assets/Images/ring.jpg";
-import colour from "../../assets/Images/colour.jpg";
-import wine from "../../assets/Images/wine.jpg";
-import people from "../../assets/Images/people.jpg";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -82,9 +72,15 @@ const Home = () => {
       <main className="home">
         <section className="hero">
           <video autoPlay loop muted className="hero__video" playsInline>
-            <source src={teaser} type="video/mp4" />
+            <source src="/videos/teaser.mp4" type="video/mp4" />
           </video>
-          <div className="hero__image"></div>
+          <div
+            className="hero__image"
+            style={{
+              background:
+                'url("/Images/one.jpg") center center / cover no-repeat',
+            }}
+          ></div>
           <div className="hero__content">
             <h1 className="hero__title">Cinematic wedding films</h1>
             <p className="hero__subtitle">
@@ -105,7 +101,11 @@ const Home = () => {
                 storytelling, we ensure every frame captures the essence of your
                 special day and preserves precious memories for years to come.
               </p>
-              <img src={three} alt="Memorable scene" className="about__image" />
+              <img
+                src="/Images/three.jpg"
+                alt="Memorable scene"
+                className="about__image"
+              />
             </div>
 
             <div className="about__box-two">
@@ -121,7 +121,11 @@ const Home = () => {
                 and the preservation of beauty.
               </p>
 
-              <img src={five} alt="Elegant moment" className="about__image" />
+              <img
+                src="/images/five.jpg"
+                alt="Elegant moment"
+                className="about__image"
+              />
             </div>
             <div className="about__box-three">
               <p className="about__text">
@@ -140,7 +144,7 @@ const Home = () => {
               </p>
 
               <img
-                src={six}
+                src="/images/six.jpg"
                 alt="Elegant moment"
                 className="about__image about__image--third"
               />
@@ -176,7 +180,7 @@ const Home = () => {
                   ))}
                 </Slider>
                 <Link to="/portfolio">
-                <button className="videos__cta">Our Portfolio</button>
+                  <button className="videos__cta">Our Portfolio</button>
                 </Link>
               </>
             )}
@@ -190,7 +194,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Cinematic Quality</h3>
                 <img
-                  src={ring}
+                  src="/images/ring.jpg"
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
@@ -203,7 +207,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Audio and Colour Correction</h3>
                 <img
-                  src={colour}
+                  src="/images/colour.jpg"
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
@@ -216,7 +220,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Elegant Storytelling</h3>
                 <img
-                  src={story}
+                  src="/images/story.jpg"
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
@@ -231,7 +235,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Full Day Coverage</h3>
                 <img
-                  src={people}
+                  src="/images/people.jpg"
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
@@ -243,7 +247,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Competitive prices</h3>
                 <img
-                  src={wine}
+                  src="/images/wine.jpg"
                   alt="Cinematic Quality"
                   className="expect__image"
                 />
@@ -255,7 +259,7 @@ const Home = () => {
               <div className="expect__feature">
                 <h3 className="expect__heading">Personal touch</h3>
                 <img
-                  src={touch}
+                  src="/images/touch.jpg"
                   alt="Black sheep standing in a field"
                   className="expect__image"
                 />
@@ -269,7 +273,10 @@ const Home = () => {
         </section>
 
         <section className="packages">
-          <div className="packages__card packages__card--diamond">
+          <div
+            className="packages__card packages__card--diamond"
+            style={{ backgroundImage: 'url("/Images/diamond.png")' }}
+          >
             <Link to="/services" className="packages__link">
               <h3 className="packages__title">Best Value</h3>
               <h1 className="packages__headline">Diamond:</h1>
@@ -280,21 +287,30 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="packages__card packages__card--gold">
+          <div
+            className="packages__card packages__card--gold"
+            style={{ backgroundImage: 'url("/Images/gold2.jpg")' }}
+          >
             <Link to="/services" className="packages__link">
               <h3 className="packages__title">Most Popular</h3>
               <h1 className="packages__headline">Gold:</h1>
               <p className="packages__description">Ceremony & Reception</p>
             </Link>
           </div>
-          <div className="packages__card packages__card--silver">
+          <div
+            className="packages__card packages__card--silver"
+            style={{ backgroundImage: 'url("/Images/silver3.jpg")' }}
+          >
             <Link to="/services" className="packages__link">
               <h3 className="packages__title">Classic & Unforgettable</h3>
               <h1 className="packages__headline">Silver</h1>
               <p className="packages__description">Preparation & Ceremony</p>
             </Link>
           </div>
-          <div className="packages__card packages__card--pearl">
+          <div
+            className="packages__card packages__card--pearl"
+            style={{ backgroundImage: 'url("/Images/pearl5.png")' }}
+          >
             <Link to="/services" className="packages__link">
               <h3 className="packages__title">Simple & Elegant</h3>
               <h1 className="packages__headline">Pearl</h1>

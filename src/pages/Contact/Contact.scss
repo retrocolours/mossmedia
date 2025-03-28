@@ -4,7 +4,6 @@ body {
   padding: 0;
   background-color: #fdfaf4;
   color: #333;
-  
 }
 
 .contact-us {
@@ -14,7 +13,7 @@ body {
   align-items: center;
   padding: 2rem;
   background-color: #fdfaf4;
-  background-image: url(../../assets/Images/contact1.jpg);
+  // background-image: url(/Images/contact1.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -28,7 +27,8 @@ body {
   margin: 1rem;
   opacity: 0.9;
 
-  &__title, &__description {
+  &__title,
+  &__description {
     text-align: center;
     margin-bottom: 1rem;
   }

@@ -1,26 +1,21 @@
 import React from "react";
 import "./About.scss";
-import stefan from "../../assets/Images/stefan.jpeg";
-import tanya from "../../assets/Images/tanya.png";
-import about from "../../assets/Images/about.jpg";
 import { Link } from "react-router-dom";
 
 const employees = [
   {
     name: "Stefan Mekkinosson",
     title: "Founder, main videographer, editor",
-    image: stefan,
+    image: "stefan.jpeg",
     description: `Born and raised in Iceland, Stefan is an Icelandic-Canadian award-winning filmmaker and videographer. 
-      He left his home country to pursue adventures in his second home, Canada. As a dedicated wedding videographer, 
-      his passion lies in capturing the essence and magic of your special day. He believes every love story is unique and 
+      His passion lies in capturing the essence and magic of your special day. He believes every love story is unique and 
       deserves to be preserved with artistry and attention to detail. In his free time enjoys finding inspiration in nature, playing boardgames with friends, and watching films that push creative boundaries.`,
   },
   {
     name: "Tatiana Privezentseva",
     title: "Assistant Videographer, Editor, Web Developer",
-    image: tanya,
+    image: "tanya.png",
     description: `Tatiana is a Russian-Canadian software engineer, videographer, and editor with a passion for both technology and storytelling. 
-      She joined Moss Media to combine her technical expertise with her love for visual arts, assisting in the filming and editing process while also managing social media and client communications. 
       With a keen eye for composition and detail, she ensures every project reflects the couple’s unique story. Her background in web development also allows her to create digital experiences that complement the cinematic work of Moss Media. 
       In her free time, Tatiana enjoys coding, reading, and exploring artistic ways to contribute to her community.`,
   },
@@ -31,9 +26,9 @@ const About = () => {
     <div className="about-container">
       <section className="about-container__intro">
         <img
-          src={about}
+          className="about-container__intro-image"
+          src="/Images/about.jpg"
           alt="A married couple enjoying Icelandic nature"
-          className="about-container__hero"
         />
         <p className="about-container__intro-text">
           Vancouver based videography studio with a focus on preserving precious
@@ -76,7 +71,7 @@ const About = () => {
             <div className="team__image-wrapper">
               <img
                 className="team__image"
-                src={employee.image}
+                src={`/Images/${employee.image}`}
                 alt={employee.name}
               />
             </div>
@@ -89,7 +84,7 @@ const About = () => {
           </div>
         ))}
         <Link to="/contact">
-        <button className="team__cta">Tell Us Your Story</button>
+          <button className="team__cta">Tell Us Your Story</button>
         </Link>
       </section>
     </div>
